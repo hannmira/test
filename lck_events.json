@@ -1,0 +1,4893 @@
+[
+    {
+        "startTime": "2023-08-09T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Playoffs - Round 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110371551279082022",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-10T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Playoffs - Round 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110371551279082028",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-11T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Playoffs - Round 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110371551279082034",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-12T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Playoffs - Round 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110371551279082040",
+            "flags": [
+                "hasVod",
+                "isSpoiler"
+            ],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-13T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Playoffs - Round 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110371551279147582",
+            "flags": [
+                "hasVod",
+                "isSpoiler"
+            ],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-19T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Playoffs - Round 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110371551279147588",
+            "flags": [
+                "hasVod",
+                "isSpoiler"
+            ],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-20T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Finals",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110371551279147594",
+            "flags": [
+                "hasVod",
+                "isSpoiler"
+            ],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-24T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Regional Qualifier",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110909366081176378",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-25T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Regional Qualifier",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110909366081176384",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2023-08-26T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Regional Qualifier",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110909366081176390",
+            "flags": [
+                "hasVod",
+                "isSpoiler"
+            ],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 3
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-17T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239849",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-17T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239937",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-18T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239857",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-18T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305501",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-19T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239833",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-19T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305521",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-20T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239905",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                },
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-20T08:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239933",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-21T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305481",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-21T08:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239869",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-24T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305485",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-24T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305497",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-25T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239881",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                },
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-25T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239889",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-26T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305509",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-26T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239845",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-27T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239861",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-27T08:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305517",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-28T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239825",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-28T08:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305493",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-31T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239873",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-01-31T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239897",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-01T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239853",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-01T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305525",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-02T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239925",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-02T10:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239865",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-03T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239837",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-03T08:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239913",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-04T06:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305489",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-04T08:30:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239929",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-14T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239921",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-14T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239841",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-15T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239885",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-15T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239893",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-16T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305505",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-16T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305513",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-17T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239917",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-17T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239821",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-18T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305529",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-18T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239909",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-21T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305533",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-21T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239941",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-22T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239877",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-22T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239829",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-23T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007239901",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-23T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305669",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-24T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305689",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-24T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305645",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-25T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305537",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-25T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 5",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305617",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-28T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305641",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-28T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371245",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-29T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305573",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-02-29T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305565",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-01T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305665",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-01T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305637",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-02T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305697",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-02T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305629",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-03T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305585",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-03T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 6",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305549",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-06T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305541",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-06T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305633",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-07T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305701",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-07T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305681",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-08T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305609",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-08T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305597",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-09T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305653",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-09T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305557",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-10T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305685",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-10T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 7",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305593",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-13T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305661",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-13T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305601",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-14T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305561",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-14T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305613",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-15T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305649",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-15T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305673",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-16T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305693",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-16T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305553",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-17T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305625",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-17T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 8",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305577",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-20T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305545",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-20T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371249",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-21T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305657",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-21T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305589",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-22T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305605",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 6,
+                        "losses": 0
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-22T10:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371241",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                },
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-23T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305581",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 2,
+                        "losses": 4
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-23T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305569",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "T1",
+                    "code": "T1",
+                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 5,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "DRX",
+                    "code": "DRX",
+                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 1,
+                        "losses": 5
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-24T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305621",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "OKSavingsBank BRION",
+                    "code": "BRO",
+                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 0,
+                        "losses": 6
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-24T08:30:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Week 9",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007305677",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "Kwangdong Freecs",
+                    "code": "KDF",
+                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 3
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": null,
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 4,
+                        "losses": 2
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-30T05:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Playoffs - Round 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371253",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                },
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2024-03-31T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Playoffs - Round 1",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371259",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                },
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2024-04-03T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Playoffs - Round 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371265",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                },
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2024-04-04T08:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Playoffs - Round 2",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371271",
+            "flags": [],
+            "teams": [
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                },
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2024-04-06T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Playoffs - Round 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371277",
+            "flags": [
+                "isSpoiler"
+            ],
+            "teams": [
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                },
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    },
+    {
+        "startTime": "2024-04-07T06:00:00Z",
+        "state": "unstarted",
+        "type": "match",
+        "blockName": "Playoffs - Round 3",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "111561337007371283",
+            "flags": [
+                "isSpoiler"
+            ],
+            "teams": [
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                },
+                {
+                    "name": "TBD",
+                    "code": "TBD",
+                    "image": "http://assets.lolesports.com/watch/team-tbd.png",
+                    "result": null,
+                    "record": null
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 5
+            }
+        }
+    }
+]

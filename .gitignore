@@ -1,0 +1,7 @@
+*venv
+*.vscode
+*__pycache__
+example.py
+lolesports_api.py
+README.md
+test_lolesports_api.py
