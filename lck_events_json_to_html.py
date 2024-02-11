@@ -51,28 +51,30 @@ def lck_events_json_to_html():
         print(f'{team}\t{points[team]}\t{diffs[team]}')
 
     str = '''<!DOCTYPE html>
-    <html>
-    <head>
-    <style>
-    table {margin: 20px;}
-    th {text-align: center; width: 42px;}
-    td {text-align: center; width: 36px;}
-    tr {border-bottom: 1px solid #888;}
-    table, th, td {border-collapse: collapse;}
-    td.ww {background-color: hsl(200, 100%, 80%);}
-    td.w {background-color: hsl(200, 100%, 90%);}
-    td.wl, td.lw {background-color: hsl(50, 100%, 80%);}
-    td.l {background-color: hsl(20, 100%, 90%);}
-    td.ll {background-color: hsl(20, 100%, 80%);}
-    td.na {background-color: #eee;}
+<html>
+<head>
+<style>
+table {margin: 20px;}
+th {text-align: center; width: 42px;}
+td {text-align: center; width: 36px;}
+tr {border-bottom: 1px solid #888;}
+table, th, td {border-collapse: collapse;}
+td.ww {background-color: hsl(200, 100%, 80%);}
+td.w {background-color: hsl(200, 100%, 90%);}
+td.wl, td.lw {background-color: hsl(50, 100%, 80%);}
+td.l {background-color: hsl(20, 100%, 90%);}
+td.ll {background-color: hsl(20, 100%, 80%);}
+td.na {background-color: #eee;}
 
-    table.schedule {border: 1px solid #aaa;}
-    col.border-right {border-right: 1px solid #aaa;}
-    table.schedule tr {border-bottom: 1px solid #aaa;}
-    </style>
-    </head>
-    <body>
-    <table><tr><td> </td>'''
+table.schedule, table.schedule thead {border-bottom: 2px solid black;}
+table.schedule tr {border-bottom: 1px solid black;}
+thead tr {border-bottom: 2px solid black;}
+th[scope=row], td.lastround {border-right: 1px solid #aaa;}
+</style>
+</head>
+<body>
+<table>
+<tr><td> </td>'''
 
     for team in teams:
         str += f'<td>{team}</td>'
@@ -100,28 +102,32 @@ def lck_events_json_to_html():
 
         str += f'<td>{points[team]}</td>'
 
-    str += '</tr></table>'
-    str += f'<table class="schedule"><colgroup><col class="border-right" /><col span="{len(teams)-2}"/><col class="border-right" /><col span="{len(teams)-2}"/><col class="border-right" /></colgroup>'
-    str += f'<tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th>Pts</th></tr>'
+    str += '</tr>\n</table>\n\n'
+    str += f'<table class="schedule">\n<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th>Pts</th></tr></thead>\n'
 
     for team in teams:
-        str += f'<tr><th>{team}</th>'
-        for match in schedule[team]:
+        str += f'<tr><th scope="row">{team}</th>'
+        for i in range(len(schedule[team])):
+            match = schedule[team][i]
+            if (i+1)%(len(teams)-1) == 0:
+                str += '<td class="lastround '
+            else:
+                str += '<td class=" '
             match match['diff']:
                 case 2:
-                    str += f'<td class="ww">{match["vs"]}</td>'
+                    str += f'ww">{match["vs"]}</td>'
                 case 1:
-                    str += f'<td class="w">{match["vs"]}</td>'
+                    str += f'w">{match["vs"]}</td>'
                 case -1:
-                    str += f'<td class="l">{match["vs"]}</td>'
+                    str += f'l">{match["vs"]}</td>'
                 case -2:
-                    str += f'<td class="ll">{match["vs"]}</td>'
+                    str += f'll">{match["vs"]}</td>'
                 case _:
-                    str += f'<td>{match["vs"]}</td>'
+                    str += f'">{match["vs"]}</td>'
 
-        str += f'<td>{points[team]}</td></tr>'
+        str += f'<td>{points[team]}</td></tr>\n'
 
-    str += "</tr></table></body></html>"
+    str += "</table>\n</body>\n</html>"
 
     with open("results.html", "w") as html_file:
         html_file.write(str)
