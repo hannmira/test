@@ -57,8 +57,11 @@ def lck_events_json_to_html():
 table {margin: 20px;}
 th {text-align: center; width: 42px;}
 td {text-align: center; width: 36px;}
-tr {border-bottom: 1px solid #888;}
+
+tr {border-bottom: 1px solid #aaa;}
+thead tr, tr:last-of-type {border-bottom: 1px solid black;}
 table, th, td {border-collapse: collapse;}
+
 td.ww {background-color: hsl(200, 100%, 80%);}
 td.w {background-color: hsl(200, 100%, 90%);}
 td.wl, td.lw {background-color: hsl(50, 100%, 80%);}
@@ -66,23 +69,22 @@ td.l {background-color: hsl(20, 100%, 90%);}
 td.ll {background-color: hsl(20, 100%, 80%);}
 td.na {background-color: #eee;}
 
-table.schedule, table.schedule thead {border-bottom: 2px solid black;}
 table.schedule tr {border-bottom: 1px solid black;}
-thead tr {border-bottom: 2px solid black;}
-th[scope=row], td.lastround {border-right: 1px solid #aaa;}
+table.schedule thead tr, table.schedule tr:last-of-type {border-bottom: 2px solid black;}
+th[scope=row], td.roundlast {border-right: 1px solid #aaa;}
 </style>
 </head>
 <body>
 <table>
-<tr><td> </td>'''
+<thead><tr><td> </td>'''
 
     for team in teams:
         str += f'<td>{team}</td>'
 
-    str += '<th>Pts</th>'
+    str += '<th>Pts</th></tr></thead>\n'
 
     for team in teams:
-        str += f'</tr>\n<tr><th>{team}</th>'
+        str += f'<tr><th>{team}</th>'
         for vs in teams:
             if team == vs:
                 str += '<td class="na">-</td>'
@@ -100,9 +102,9 @@ th[scope=row], td.lastround {border-right: 1px solid #aaa;}
 
             str += f'<td class="{style}">{text}</td>'
 
-        str += f'<td>{points[team]}</td>'
+        str += f'<td>{points[team]}</td></tr>\n'
 
-    str += '</tr>\n</table>\n\n'
+    str += '</table>\n\n'
     str += f'<table class="schedule">\n<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th>Pts</th></tr></thead>\n'
 
     for team in teams:
@@ -110,7 +112,7 @@ th[scope=row], td.lastround {border-right: 1px solid #aaa;}
         for i in range(len(schedule[team])):
             match = schedule[team][i]
             if (i+1)%(len(teams)-1) == 0:
-                str += '<td class="lastround '
+                str += '<td class="roundlast '
             else:
                 str += '<td class=" '
             match match['diff']:
