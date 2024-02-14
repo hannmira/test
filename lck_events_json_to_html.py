@@ -15,7 +15,7 @@ def lck_events_json_to_html():
     points = {}
     diffs = {}
     teams = ['GEN', 'T1', 'KT', 'HLE', 'DK', 'DRX', 'FOX', 'BRO', 'NS', 'KDF']
-    upcomings = []
+    upcomings = {}
 
     for event in events:
         if datetime.strptime(event['startTime'], "%Y-%m-%dT%H:%M:%SZ") < datetime(2024, 1, 1):
@@ -46,18 +46,16 @@ def lck_events_json_to_html():
             schedule.setdefault(home, []).append({'vs':away, 'diff':None})
             schedule.setdefault(away, []).append({'vs':home, 'diff':None})
 
-            if len(upcomings) < 10:
+            if len(upcomings) < 6:
                 # 문자열을 datetime 객체로 변환
-                date_utc = datetime.fromisoformat(event['startTime'].replace('Z', '+00:00'))
+                datetime_utc = datetime.fromisoformat(event['startTime'].replace('Z', '+00:00'))
 
                 # 한국 시간대는 UTC+9
-                date_korean = date_utc.replace(tzinfo=timezone.utc) + timedelta(hours=9)
+                datetime_korean = datetime_utc.replace(tzinfo=timezone.utc) + timedelta(hours=9)
 
-                # 형식에 맞게 출력
-                formatted_date = date_korean.strftime("%b %#d %H:%M")
+                upcomings.setdefault(datetime_korean.strftime("%b %d %a"),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
 
-                upcomings.append({"date":formatted_date.split()[0]+" "+formatted_date.split()[1], "time":formatted_date.split()[2], "home":home, "away":away })
-
+    upcomings.popitem()
     teams.sort(key=lambda x: (points[x], diffs[x]), reverse=True)
     for team in teams:
         print(f'{team}\t{points[team]}\t{diffs[team]}')
@@ -86,11 +84,11 @@ table.schedule thead tr, table.schedule tr:last-of-type {border-bottom: 2px soli
 th[scope=row], td.roundlast {border-right: 1px solid #aaa;}
 
 table.upcomings {border-top: 1px solid black;}
-table.upcomings td:nth-of-type(1) {width:56px; text-align:left;}
-table.upcomings td:nth-of-type(2) {text-align:right;}
-table.upcomings td:nth-of-type(3) {width: 56px;font-weight:bold;}
-table.upcomings td:nth-of-type(4) {width:18px;}
-table.upcomings td:nth-of-type(5) {width: 56px;font-weight:bold;}
+table.upcomings td.date {width:96px; text-align:left; vertical-align: top;}
+table.upcomings td:nth-last-of-type(4) {width: 48px; text-align:left;}
+table.upcomings td:nth-last-of-type(3) {width: 56px;font-weight:bold;}
+table.upcomings td:nth-last-of-type(2) {width:18px;}
+table.upcomings td:nth-last-of-type(1) {width: 56px;font-weight:bold;}
 
 </style>
 </head>
@@ -152,9 +150,10 @@ table.upcomings td:nth-of-type(5) {width: 56px;font-weight:bold;}
     str += "</table>\n"
 
     str += '<table class="upcomings">\n'
-    for upcoming in upcomings:
-        str += f'<tr><td>{upcoming["date"]}</td><td>{upcoming["time"]}</td><td>{upcoming["home"]}</td><td>vs</td><td>{upcoming["away"]}</td></tr>\n'
-
+    for date in upcomings.keys():
+        str += f'<tr><td class="date" rowspan="{len(upcomings[date])}">{date}</td><td>{upcomings[date][0]["time"]}</td><td>{upcomings[date][0]["home"]}</td><td>vs</td><td>{upcomings[date][0]["away"]}</td></tr>\n'
+        for i in range(len(upcomings[date])-1):
+            str += f'<tr><td>{upcomings[date][i+1]["time"]}</td><td>{upcomings[date][i+1]["home"]}</td><td>vs</td><td>{upcomings[date][i+1]["away"]}</td></tr>\n'
 
     str += "</table>\n"
     str += "</body>\n</html>"
