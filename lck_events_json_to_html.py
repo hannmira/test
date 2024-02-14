@@ -68,8 +68,6 @@ table {margin: 20px;}
 th {text-align: center; width: 42px;}
 td {text-align: center; width: 36px;}
 
-tr {border-bottom: 1px solid #aaa;}
-thead tr, tr:last-of-type {border-bottom: 1px solid black;}
 table, th, td {border-collapse: collapse;}
 
 td.ww {background-color: hsl(200, 100%, 80%);}
@@ -79,21 +77,26 @@ td.l {background-color: hsl(20, 100%, 90%);}
 td.ll {background-color: hsl(20, 100%, 80%);}
 td.na {background-color: #eee;}
 
+table.vs tr {border-bottom: 1px solid #aaa;}
+table.vs thead tr, table.vs tr:last-of-type {border-bottom: 1px solid black;}
+
 table.schedule tr {border-bottom: 1px solid black;}
 table.schedule thead tr, table.schedule tr:last-of-type {border-bottom: 2px solid black;}
 th[scope=row], td.roundlast {border-right: 1px solid #aaa;}
 
-table.upcomings {border-top: 1px solid black;}
-table.upcomings td.date {width:96px; text-align:left; vertical-align: top;}
+table.upcomings tr {border-top: 1px solid #aaa;}
+table.upcomings tr.date {border-top: 1px solid black;}
+table.upcomings td.date {width: 112px; text-align: left; vertical-align: top;}
 table.upcomings td:nth-last-of-type(4) {width: 48px; text-align:left;}
 table.upcomings td:nth-last-of-type(3) {width: 56px;font-weight:bold;}
-table.upcomings td:nth-last-of-type(2) {width:18px;}
+table.upcomings td:nth-last-of-type(2) {width: 18px;}
 table.upcomings td:nth-last-of-type(1) {width: 56px;font-weight:bold;}
+table.upcomings {border-bottom: 1px solid black;}
 
 </style>
 </head>
 <body>
-<table>
+<table class="vs">
 <thead><tr><td> </td>'''
 
     for team in teams:
@@ -151,7 +154,7 @@ table.upcomings td:nth-last-of-type(1) {width: 56px;font-weight:bold;}
 
     str += '<table class="upcomings">\n'
     for date in upcomings.keys():
-        str += f'<tr><td class="date" rowspan="{len(upcomings[date])}">{date}</td><td>{upcomings[date][0]["time"]}</td><td>{upcomings[date][0]["home"]}</td><td>vs</td><td>{upcomings[date][0]["away"]}</td></tr>\n'
+        str += f'<tr class="date"><td class="date" rowspan="{len(upcomings[date])}">{date}</td><td>{upcomings[date][0]["time"]}</td><td>{upcomings[date][0]["home"]}</td><td>vs</td><td>{upcomings[date][0]["away"]}</td></tr>\n'
         for i in range(len(upcomings[date])-1):
             str += f'<tr><td>{upcomings[date][i+1]["time"]}</td><td>{upcomings[date][i+1]["home"]}</td><td>vs</td><td>{upcomings[date][i+1]["away"]}</td></tr>\n'
 
