@@ -53,12 +53,11 @@ def lck_events_json_to_html():
                 # 한국 시간대는 UTC+9
                 datetime_korean = datetime_utc.replace(tzinfo=timezone.utc) + timedelta(hours=9)
 
-                upcomings.setdefault(datetime_korean.strftime("%b %d %a"),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
+                # upcomings.setdefault(datetime_korean.strftime("%b %d %a"),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
+                upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
 
     upcomings.popitem()
     teams.sort(key=lambda x: (points[x], diffs[x]), reverse=True)
-    for team in teams:
-        print(f'{team}\t{points[team]}\t{diffs[team]}')
 
     str = '''<!DOCTYPE html>
 <html>
@@ -92,7 +91,8 @@ table.upcomings td:nth-last-of-type(3) {width: 56px;font-weight:bold;}
 table.upcomings td:nth-last-of-type(2) {width: 18px;}
 table.upcomings td:nth-last-of-type(1) {width: 56px;font-weight:bold;}
 table.upcomings {border-bottom: 1px solid black;}
-
+td.sat {color: hsl(200, 100%, 30%);}
+td.sun {color: hsl(20, 100%, 30%);}
 </style>
 </head>
 <body>
@@ -154,7 +154,15 @@ table.upcomings {border-bottom: 1px solid black;}
 
     str += '<table class="upcomings">\n'
     for date in upcomings.keys():
-        str += f'<tr class="date"><td class="date" rowspan="{len(upcomings[date])}">{date}</td><td>{upcomings[date][0]["time"]}</td><td>{upcomings[date][0]["home"]}</td><td>vs</td><td>{upcomings[date][0]["away"]}</td></tr>\n'
+        match date.weekday():
+            case 5:
+                str += f'<tr class="date"><td class="date sat"'
+            case 6:
+                str += f'<tr class="date"><td class="date sun"'
+            case _:
+                str += f'<tr class="date"><td class="date"'
+
+        str += f' rowspan="{len(upcomings[date])}">{date.strftime("%b %d %a")}</td><td>{upcomings[date][0]["time"]}</td><td>{upcomings[date][0]["home"]}</td><td>vs</td><td>{upcomings[date][0]["away"]}</td></tr>\n'
         for i in range(len(upcomings[date])-1):
             str += f'<tr><td>{upcomings[date][i+1]["time"]}</td><td>{upcomings[date][i+1]["home"]}</td><td>vs</td><td>{upcomings[date][i+1]["away"]}</td></tr>\n'
 
