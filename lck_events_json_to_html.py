@@ -26,7 +26,7 @@ def lck_events_json_to_html():
         home = event['match']['teams'][0]['code']
         away = event['match']['teams'][1]['code']
 
-        if event['state'] == 'completed':
+        if event['match']['teams'][0]['result']['outcome']:
             point = 1 if event['match']['teams'][0]['result']['outcome'] == 'win' else -1
             diff = event['match']['teams'][0]['result']['gameWins'] - event['match']['teams'][1]['result']['gameWins']
 
