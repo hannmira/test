@@ -64,10 +64,17 @@ def lck_events_json_to_html():
 <head>
 <style>
 table {margin: 20px;}
-th {text-align: center; width: 42px;}
-td {text-align: center; width: 36px;}
-
 table, th, td {border-collapse: collapse;}
+
+th {text-align: center;}
+td {text-align: center;}
+
+col {width: 36px;}
+col.team {width: 42px;}
+col.pts {width: 32px;}
+col.date {width: 106px;}
+col.time {width: 60px;}
+col.vs {width: 50px;}
 
 td.ww {background-color: hsl(200, 100%, 80%);}
 td.w {background-color: hsl(200, 100%, 90%);}
@@ -81,22 +88,24 @@ table.vs thead tr, table.vs tr:last-of-type {border-bottom: 1px solid black;}
 
 table.schedule tr {border-bottom: 1px solid black;}
 table.schedule thead tr, table.schedule tr:last-of-type {border-bottom: 2px solid black;}
-th[scope=row], td.roundlast {border-right: 1px solid #aaa;}
+table.schedule th[scope=row], td.roundlast {border-right: 1px solid #aaa;}
 
 table.upcomings tr {border-top: 1px solid #aaa;}
 table.upcomings tr.date {border-top: 1px solid black;}
-table.upcomings td.date {width: 102px; text-align: left; vertical-align: top;}
-table.upcomings td:nth-last-of-type(4) {width: 52px; text-align:center;}
-table.upcomings td:nth-last-of-type(2) {width: 18px;}
-table.upcomings td:nth-last-of-type(1), table.upcomings td:nth-last-of-type(3) {width: 56px;font-weight:bold;}
 table.upcomings {border-bottom: 1px solid black;}
+table.upcomings td.date {text-align: left; vertical-align: top;}
+table.upcomings td:nth-last-of-type(4) {text-align: left;}
+table.upcomings td:nth-last-of-type(1), table.upcomings td:nth-last-of-type(3) {font-weight:bold;}
 td.sat {color: hsl(200, 100%, 30%);}
 td.sun {color: hsl(20, 100%, 30%);}
 </style>
 </head>
 <body>
-<table class="vs">
-<thead><tr><td> </td>'''
+'''
+
+    str += '<table class="vs">\n'
+    str += f'<colgroup><col class="team"><col span="{len(teams)}"><col class="pts"></colgroup>\n'
+    str += '<thead><tr><td> </td>'
 
     for team in teams:
         str += f'<td>{team}</td>'
@@ -125,7 +134,9 @@ td.sun {color: hsl(20, 100%, 30%);}
         str += f'<td>{points[team]}</td></tr>\n'
 
     str += '</table>\n\n'
-    str += f'<table class="schedule">\n<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th>Pts</th></tr></thead>\n'
+    str += '<table class="schedule">\n'
+    str += f'<colgroup><col class="team"><col span="{len(teams)-1}"><col span="{len(teams)-1}"><col class="pts"></colgroup>\n'
+    str += f'<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th>Pts</th></tr></thead>\n'
 
     for team in teams:
         str += f'<tr><th scope="row">{team}</th>'
@@ -152,14 +163,17 @@ td.sun {color: hsl(20, 100%, 30%);}
     str += "</table>\n"
 
     str += '<table class="upcomings">\n'
+    str += '<colgroup><col class="date"><col class="time"><col class="team"><col class="vs"><col class="team"></colgroup>\n'
     for date in upcomings.keys():
+        str += '<tr class="date"><td class="date'
+
         match date.weekday():
             case 5:
-                str += f'<tr class="date"><td class="date sat"'
+                str += ' sat"'
             case 6:
-                str += f'<tr class="date"><td class="date sun"'
+                str += ' sun"'
             case _:
-                str += f'<tr class="date"><td class="date"'
+                str += '"'
 
         str += f' rowspan="{len(upcomings[date])}">{date.strftime("%b %d %a")}</td><td>{upcomings[date][0]["time"]}</td><td>{upcomings[date][0]["home"]}</td><td>vs</td><td>{upcomings[date][0]["away"]}</td></tr>\n'
         for i in range(len(upcomings[date])-1):
