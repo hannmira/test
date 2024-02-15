@@ -10,7 +10,8 @@ def lck_events_json_to_html():
     with open('lck_events.json', 'r') as f:
         events = json.load(f)
 
-    against = {}
+    matchvs = {}
+    roundmatchvs = {}
     schedule = {}
     points = {}
     diffs = {}
@@ -36,8 +37,11 @@ def lck_events_json_to_html():
             diffs[home] = diffs.setdefault(home, 0) + diff
             diffs[away] = diffs.setdefault(away, 0) - diff
 
-            against.setdefault(home, {}).setdefault(away, []).append(point)
-            against.setdefault(away, {}).setdefault(home, []).append(-point)
+            matchvs.setdefault(home, {}).setdefault(away, []).append(point)
+            matchvs.setdefault(away, {}).setdefault(home, []).append(-point)
+
+            roundmatchvs.setdefault(home, {})[away] = diff
+            roundmatchvs.setdefault(away, {})[home] = -diff
 
             schedule.setdefault(home, []).append({'vs':away, 'diff':diff})
             schedule.setdefault(away, []).append({'vs':home, 'diff':-diff})
@@ -69,12 +73,12 @@ table, th, td {border-collapse: collapse;}
 th {text-align: center;}
 td {text-align: center;}
 
-col {width: 36px;}
+col {width: 38px;}
 col.team {width: 42px;}
 col.pts {width: 32px;}
-col.date {width: 106px;}
+col.date {width: 104px;}
 col.time {width: 60px;}
-col.vs {width: 50px;}
+col.vs {width: 30px;}
 
 td.ww {background-color: hsl(200, 100%, 80%);}
 td.w {background-color: hsl(200, 100%, 90%);}
@@ -94,8 +98,8 @@ table.upcomings tr {border-top: 1px solid #aaa;}
 table.upcomings tr.date {border-top: 1px solid black;}
 table.upcomings {border-bottom: 1px solid black;}
 table.upcomings td.date {text-align: left; vertical-align: top;}
-table.upcomings td:nth-last-of-type(4) {text-align: left;}
-table.upcomings td:nth-last-of-type(1), table.upcomings td:nth-last-of-type(3) {font-weight:bold;}
+table.upcomings td.time {text-align: left;}
+table.upcomings td.team {font-weight:bold;}
 td.sat {color: hsl(200, 100%, 30%);}
 td.sun {color: hsl(20, 100%, 30%);}
 </style>
@@ -121,7 +125,7 @@ td.sun {color: hsl(20, 100%, 30%);}
 
             text = ''
             style = ''
-            for point in against[team].get(vs) or []:
+            for point in matchvs[team].get(vs) or []:
                 if point == 1:
                     text = text + '-' + 'W' if text else 'W'
                     style += 'w'
@@ -134,6 +138,45 @@ td.sun {color: hsl(20, 100%, 30%);}
         str += f'<td>{points[team]}</td></tr>\n'
 
     str += '</table>\n\n'
+
+    str += '<table class="vs">\n'
+    str += f'<colgroup><col class="team"><col span="{len(teams)}"><col class="pts"></colgroup>\n'
+    str += '<thead><tr><td> </td>'
+
+    for team in teams:
+        str += f'<td>{team}</td>'
+
+    str += '<th>Pts</th></tr></thead>\n'
+
+    for team in teams:
+        str += f'<tr><th>{team}</th>'
+        for vs in teams:
+            if team == vs:
+                str += '<td class="na">-</td>'
+                continue
+
+            text = ''
+            style = ''
+            match roundmatchvs[team].get(vs):
+                case 2:
+                    text = 'W'
+                    style = 'ww'
+                case 1:
+                    text = 'W'
+                    style = 'w'
+                case -1:
+                    text = 'L'
+                    style = 'l'
+                case -2:
+                    text = 'L'
+                    style = 'll'
+
+            str += f'<td class="{style}">{text}</td>'
+
+        str += f'<td>{points[team]}</td></tr>\n'
+
+    str += '</table>\n\n'
+
     str += '<table class="schedule">\n'
     str += f'<colgroup><col class="team"><col span="{len(teams)-1}"><col span="{len(teams)-1}"><col class="pts"></colgroup>\n'
     str += f'<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th>Pts</th></tr></thead>\n'
@@ -175,9 +218,28 @@ td.sun {color: hsl(20, 100%, 30%);}
             case _:
                 str += '"'
 
-        str += f' rowspan="{len(upcomings[date])}">{date.strftime("%b %d %a")}</td><td>{upcomings[date][0]["time"]}</td><td>{upcomings[date][0]["home"]}</td><td>vs</td><td>{upcomings[date][0]["away"]}</td></tr>\n'
+        str += f' rowspan="{len(upcomings[date])}">{date.strftime("%b %d %a")}</td>'
+
+        home = upcomings[date][0]["home"]
+        homeHue = (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 80 + 20
+        hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,90%)">{home}</td>'
+
+        away = upcomings[date][0]["away"]
+        awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 80 + 20
+        awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
+
+        str += f'<td class="time">{upcomings[date][0]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
+
         for i in range(len(upcomings[date])-1):
-            str += f'<tr><td>{upcomings[date][i+1]["time"]}</td><td>{upcomings[date][i+1]["home"]}</td><td>vs</td><td>{upcomings[date][i+1]["away"]}</td></tr>\n'
+            home = upcomings[date][i+1]["home"]
+            homeHue = (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 80 + 20
+            hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,90%)">{home}</td>'
+
+            away = upcomings[date][i+1]["away"]
+            awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 80 + 20
+            awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
+
+            str += f'<tr><td class="time">{upcomings[date][0]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
 
     str += "</table>\n"
     str += "</body>\n</html>"
