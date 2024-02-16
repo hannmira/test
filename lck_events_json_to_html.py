@@ -6,67 +6,12 @@ chdir(dirname(__file__))
 import json
 from datetime import datetime, timezone, timedelta
 
-def lck_events_json_to_html():
-    with open('lck_events.json', 'r') as f:
-        events = json.load(f)
-
-    matchvs = {}
-    roundmatchvs = {}
-    schedule = {}
-    points = {}
-    diffs = {}
-    teams = ['GEN', 'T1', 'KT', 'HLE', 'DK', 'DRX', 'FOX', 'BRO', 'NS', 'KDF']
-    upcomings = {}
-
-    for event in events:
-        if datetime.strptime(event['startTime'], "%Y-%m-%dT%H:%M:%SZ") < datetime(2024, 1, 1):
-            continue
-        if not event['blockName'].startswith('Week'):
-            continue
-
-        home = event['match']['teams'][0]['code']
-        away = event['match']['teams'][1]['code']
-
-        if event['match']['teams'][0]['result']['outcome']:
-            point = 1 if event['match']['teams'][0]['result']['outcome'] == 'win' else -1
-            diff = event['match']['teams'][0]['result']['gameWins'] - event['match']['teams'][1]['result']['gameWins']
-
-            points[home] = points.setdefault(home, 0) + point
-            points[away] = points.setdefault(away, 0) - point
-
-            diffs[home] = diffs.setdefault(home, 0) + diff
-            diffs[away] = diffs.setdefault(away, 0) - diff
-
-            matchvs.setdefault(home, {}).setdefault(away, []).append(point)
-            matchvs.setdefault(away, {}).setdefault(home, []).append(-point)
-
-            roundmatchvs.setdefault(home, {})[away] = diff
-            roundmatchvs.setdefault(away, {})[home] = -diff
-
-            schedule.setdefault(home, []).append({'vs':away, 'diff':diff})
-            schedule.setdefault(away, []).append({'vs':home, 'diff':-diff})
-
-        else:
-            schedule.setdefault(home, []).append({'vs':away, 'diff':None})
-            schedule.setdefault(away, []).append({'vs':home, 'diff':None})
-
-            if len(upcomings) < 6:
-                # 문자열을 datetime 객체로 변환
-                datetime_utc = datetime.fromisoformat(event['startTime'].replace('Z', '+00:00'))
-
-                # 한국 시간대는 UTC+9
-                datetime_korean = datetime_utc.replace(tzinfo=timezone.utc) + timedelta(hours=9)
-
-                # upcomings.setdefault(datetime_korean.strftime("%b %d %a"),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
-                upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
-
-    upcomings.popitem()
-    teams.sort(key=lambda x: (points[x], diffs[x]), reverse=True)
-
-    str = '''<!DOCTYPE html>
+HTML_HEAD = '''<!DOCTYPE html>
 <html>
 <head>
 <style>
+.flex-container {display: flex;}
+caption {font-weight:bold;}
 table {margin: 20px;}
 table, th, td {border-collapse: collapse;}
 
@@ -107,6 +52,83 @@ td.sun {color: hsl(20, 100%, 30%);}
 <body>
 '''
 
+HTML_FOOT = '''</body>
+</html>'''
+
+def convert_to_datetime(date_string):
+    try:
+        datetime_obj = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%fZ")
+    except ValueError:
+        datetime_obj = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%SZ")
+    return datetime_obj
+
+def lck_events_json_to_html():
+    with open('lck_events.json', 'r') as f:
+        events = json.load(f)
+
+    matchvs = {}
+    schedule = {}
+    points = {}
+    diffs = {}
+    teams = ['GEN', 'T1', 'KT', 'HLE', 'DK', 'DRX', 'FOX', 'BRO', 'NS', 'KDF']
+    upcomings = {}
+    roundmatchvs = []
+    oneroundmatchvs = {}
+
+    index = 0
+    for event in events:
+        if convert_to_datetime(event['startTime']) < datetime(2024, 1, 1):
+            continue
+        if event['type'] != 'match':
+            continue
+        if not event['blockName'].startswith('Week'):
+            continue
+
+        # 문자열을 datetime 객체로 변환
+        datetime_utc = datetime.fromisoformat(event['startTime'].replace('Z', '+00:00'))
+        # 한국 시간대는 UTC+9
+        datetime_korean = datetime_utc.replace(tzinfo=timezone.utc) + timedelta(hours=9)
+
+        home = event['match']['teams'][0]['code']
+        away = event['match']['teams'][1]['code']
+        diff = 0
+
+        if event['match']['teams'][0]['result']['outcome']:
+            point = 1 if event['match']['teams'][0]['result']['outcome'] == 'win' else -1
+            diff = event['match']['teams'][0]['result']['gameWins'] - event['match']['teams'][1]['result']['gameWins']
+
+            points[home] = points.setdefault(home, 0) + point
+            points[away] = points.setdefault(away, 0) - point
+
+            diffs[home] = diffs.setdefault(home, 0) + diff
+            diffs[away] = diffs.setdefault(away, 0) - diff
+
+            matchvs.setdefault(home, {}).setdefault(away, []).append(point)
+            matchvs.setdefault(away, {}).setdefault(home, []).append(-point)
+
+            schedule.setdefault(home, []).append({'vs':away, 'diff':diff})
+            schedule.setdefault(away, []).append({'vs':home, 'diff':-diff})
+
+        else:
+            schedule.setdefault(home, []).append({'vs':away, 'diff':None})
+            schedule.setdefault(away, []).append({'vs':home, 'diff':None})
+
+            if len(upcomings) < 6:
+                upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
+
+        oneroundmatchvs.setdefault(home, {})[away] = {'date':datetime_korean.strftime("%#m/%#d"), 'diff':diff}
+        oneroundmatchvs.setdefault(away, {})[home] = {'date':datetime_korean.strftime("%#m/%#d"), 'diff':-diff}
+
+        if index % (len(teams)*(len(teams)-1)/2) == (len(teams)*(len(teams)-1)/2)-1:
+            roundmatchvs.append(oneroundmatchvs)
+            oneroundmatchvs = {}
+
+        index += 1
+
+    upcomings.popitem()
+    teams.sort(key=lambda x: (points[x], diffs[x]), reverse=True)
+
+    str = HTML_HEAD
     str += '<table class="vs">\n'
     str += f'<colgroup><col class="team"><col span="{len(teams)}"><col class="pts"></colgroup>\n'
     str += '<thead><tr><td> </td>'
@@ -139,43 +161,45 @@ td.sun {color: hsl(20, 100%, 30%);}
 
     str += '</table>\n\n'
 
-    str += '<table class="vs">\n'
-    str += f'<colgroup><col class="team"><col span="{len(teams)}"><col class="pts"></colgroup>\n'
-    str += '<thead><tr><td> </td>'
+    str += '<div class="flex-container">'
+    for index in range(len(roundmatchvs)):
+        oneround = roundmatchvs[index]
 
-    for team in teams:
-        str += f'<td>{team}</td>'
+        str += '<table class="vs">\n'
+        str += f'<caption>Round {index+1}</caption>\n'
+        str += f'<colgroup><col class="team"><col span="{len(teams)}"><col class="pts"></colgroup>\n'
+        str += '<thead><tr><td> </td>'
 
-    str += '<th>Pts</th></tr></thead>\n'
+        for team in teams:
+            str += f'<td>{team}</td>'
 
-    for team in teams:
-        str += f'<tr><th>{team}</th>'
-        for vs in teams:
-            if team == vs:
-                str += '<td class="na">-</td>'
-                continue
+        str += '<th>Pts</th></tr></thead>\n'
 
-            text = ''
-            style = ''
-            match roundmatchvs[team].get(vs):
-                case 2:
-                    text = 'W'
-                    style = 'ww'
-                case 1:
-                    text = 'W'
-                    style = 'w'
-                case -1:
-                    text = 'L'
-                    style = 'l'
-                case -2:
-                    text = 'L'
-                    style = 'll'
+        for team in teams:
+            str += f'<tr><th>{team}</th>'
+            for vs in teams:
+                if team == vs:
+                    str += '<td class="na">-</td>'
+                    continue
 
-            str += f'<td class="{style}">{text}</td>'
+                text = ''
+                style = ''
+                match oneround[team][vs].get("diff"):
+                    case 2:
+                        style = 'ww'
+                    case 1:
+                        style = 'w'
+                    case -1:
+                        style = 'l'
+                    case -2:
+                        style = 'll'
+                str += f'<td class="{style}">{oneround[team][vs]["date"]}</td>'
 
-        str += f'<td>{points[team]}</td></tr>\n'
+            str += f'<td>{points[team]}</td></tr>\n'
 
-    str += '</table>\n\n'
+        str += '</table>\n\n'
+
+    str += '</div>'
 
     str += '<table class="schedule">\n'
     str += f'<colgroup><col class="team"><col span="{len(teams)-1}"><col span="{len(teams)-1}"><col class="pts"></colgroup>\n'
@@ -242,10 +266,11 @@ td.sun {color: hsl(20, 100%, 30%);}
             str += f'<tr><td class="time">{upcomings[date][0]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
 
     str += "</table>\n"
-    str += "</body>\n</html>"
+    str += HTML_FOOT
 
     with open("results.html", "w") as html_file:
         html_file.write(str)
 
 if __name__ == "__main__":
     lck_events_json_to_html()
+
