@@ -10,9 +10,9 @@ HTML_HEAD = '''<!DOCTYPE html>
 <html>
 <head>
 <style>
-.flex-container {display: flex;}
+.flex-container {display: flex; flex-flow: row wrap;}
 caption {font-weight:bold;}
-table {margin: 20px;}
+table {margin: 10px;}
 table, th, td {border-collapse: collapse;}
 
 th {text-align: center;}
@@ -161,7 +161,7 @@ def lck_events_json_to_html():
 
     str += '</table>\n\n'
 
-    str += '<div class="flex-container">'
+    str += '<div class="flex-container">\n'
     for index in range(len(roundmatchvs)):
         oneround = roundmatchvs[index]
 
@@ -197,9 +197,9 @@ def lck_events_json_to_html():
 
             str += f'<td>{points[team]}</td></tr>\n'
 
-        str += '</table>\n\n'
+        str += '</table>\n'
 
-    str += '</div>'
+    str += '</div>\n\n'
 
     str += '<table class="schedule">\n'
     str += f'<colgroup><col class="team"><col span="{len(teams)-1}"><col span="{len(teams)-1}"><col class="pts"></colgroup>\n'
@@ -227,9 +227,9 @@ def lck_events_json_to_html():
 
         str += f'<td>{points[team]}</td></tr>\n'
 
-    str += "</table>\n"
+    str += "</table>\n\n"
 
-    str += '<table class="upcomings">\n'
+    str += '<div class="flex-container">\n<table class="upcomings">\n'
     str += '<colgroup><col class="date"><col class="time"><col class="team"><col class="vs"><col class="team"></colgroup>\n'
     for date in upcomings.keys():
         str += '<tr class="date"><td class="date'
@@ -265,7 +265,7 @@ def lck_events_json_to_html():
 
             str += f'<tr><td class="time">{upcomings[date][i+1]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
 
-    str += "</table>\n"
+    str += "</table>\n</div>\n\n"
     str += HTML_FOOT
 
     with open("results.html", "w") as html_file:
