@@ -263,7 +263,7 @@ def lck_events_json_to_html():
             awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 80 + 20
             awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
 
-            str += f'<tr><td class="time">{upcomings[date][0]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
+            str += f'<tr><td class="time">{upcomings[date][i+1]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
 
     str += "</table>\n"
     str += HTML_FOOT
