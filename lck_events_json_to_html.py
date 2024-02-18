@@ -44,8 +44,8 @@ table.upcomings {border-top: 2px solid black;}
 table.upcomings td.date {text-align: left; vertical-align: top;}
 table.upcomings td.time {text-align: left;}
 table.upcomings td.team {font-weight: bold;}
-td.sat {color: hsl(200, 100%, 30%);}
-td.sun {color: hsl(20, 100%, 30%);}
+td.sat {color: hsl(220, 100%, 40%);}
+td.sun {color: hsl(0, 100%, 40%);}
 </style>
 </head>
 <body>
