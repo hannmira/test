@@ -14,7 +14,7 @@ HTML_HEAD = '''<!DOCTYPE html>
 <head>
 <style>
 .flex-container {display: flex; flex-flow: row wrap;}
-caption {font-weight:bold;}
+caption {font-weight: bold;}
 table {margin: 10px;}
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
@@ -36,13 +36,14 @@ td.wl, td.lw {background-color: hsl(50, 100%, 80%);}
 td.l {background-color: hsl(20, 100%, 90%);}
 td.ll {background-color: hsl(20, 100%, 80%);}
 td.na {background-color: #eee;}
+td.pts {font-weight: bold;}
 
 table.schedule th[scope=row], td.roundlast {border-right: 1px solid #aaa;}
 
 table.upcomings {border-top: 2px solid black;}
 table.upcomings td.date {text-align: left; vertical-align: top;}
 table.upcomings td.time {text-align: left;}
-table.upcomings td.team {font-weight:bold;}
+table.upcomings td.team {font-weight: bold;}
 td.sat {color: hsl(200, 100%, 30%);}
 td.sun {color: hsl(20, 100%, 30%);}
 </style>
@@ -134,7 +135,7 @@ def lck_events_json_to_html():
     for team in teams:
         str += f'<td>{team}</td>'
 
-    str += '<th>Pts</th></tr></thead>\n'
+    str += '<th class="pts">Pts</th></tr></thead>\n'
 
     for team in teams:
         str += f'<tr><th>{team}</th>'
@@ -155,7 +156,7 @@ def lck_events_json_to_html():
 
             str += f'<td class="{style}">{text}</td>'
 
-        str += f'<td>{points[team]}</td></tr>\n'
+        str += f'<td class="pts">{points[team]}</td></tr>\n'
 
     str += '</table>\n\n'
 
@@ -171,7 +172,7 @@ def lck_events_json_to_html():
         for team in teams:
             str += f'<td>{team}</td>'
 
-        str += '<th>Pts</th></tr></thead>\n'
+        str += '<th class="pts">Pts</th></tr></thead>\n'
 
         for team in teams:
             str += f'<tr><th>{team}</th>'
@@ -193,7 +194,7 @@ def lck_events_json_to_html():
                         style = 'll'
                 str += f'<td class="{style}">{oneround[team][vs]["date"]}</td>'
 
-            str += f'<td>{points[team]}</td></tr>\n'
+            str += f'<td class="pts">{points[team]}</td></tr>\n'
 
         str += '</table>\n'
 
@@ -201,7 +202,7 @@ def lck_events_json_to_html():
 
     str += '<table class="schedule">\n'
     str += f'<colgroup><col class="team"><col span="{len(teams)-1}"><col span="{len(teams)-1}"><col class="pts"></colgroup>\n'
-    str += f'<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th>Pts</th></tr></thead>\n'
+    str += f'<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th class="pts">Pts</th></tr></thead>\n'
 
     for team in teams:
         str += f'<tr><th scope="row">{team}</th>'
@@ -224,7 +225,7 @@ def lck_events_json_to_html():
                     vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 10
                     str += f'" style="background-color: hsl(50,100%,{vsLt}%)">{match["vs"]}</td>'
 
-        str += f'<td>{points[team]}</td></tr>\n'
+        str += f'<td class="pts">{points[team]}</td></tr>\n'
 
     str += "</table>\n\n"
 
