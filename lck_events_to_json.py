@@ -11,8 +11,12 @@ def lck_events_to_json():
     api = Lolesports_API()
     data = api.get_schedule(league_id=98767991310872058)
 
+    olderPageToken = data['schedule']['pages']['older']
     pageToken = data['schedule']['pages']['newer']
     events = data['schedule']['events']
+
+    data = api.get_schedule(league_id=98767991310872058, pageToken=olderPageToken)
+    events = data['schedule']['events'] + events
 
     while pageToken:
         data = api.get_schedule(league_id=98767991310872058, pageToken=pageToken)

@@ -6,6 +6,8 @@ chdir(dirname(__file__))
 import json
 from datetime import datetime, timezone, timedelta
 
+timezone_korean = timezone(timedelta(hours=9))
+
 HIGH_LOW = 120
 LOW = 0
 
@@ -86,7 +88,7 @@ def lck_events_json_to_html():
         # 문자열을 datetime 객체로 변환
         datetime_utc = datetime.fromisoformat(event['startTime'].replace('Z', '+00:00'))
         # 한국 시간대는 UTC+9
-        datetime_korean = datetime_utc.replace(tzinfo=timezone.utc) + timedelta(hours=9)
+        datetime_korean = datetime_utc.astimezone(timezone_korean)
 
         home = event['match']['teams'][0]['code']
         away = event['match']['teams'][1]['code']
@@ -112,8 +114,9 @@ def lck_events_json_to_html():
             schedule.setdefault(home, []).append({'vs':away, 'diff':None})
             schedule.setdefault(away, []).append({'vs':home, 'diff':None})
 
-            if len(upcomings) < 6:
-                upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
+        today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone_korean)
+        if datetime_korean >= today_midnight and datetime_korean < today_midnight + timedelta(days=7):
+            upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
 
         oneroundmatchvs.setdefault(home, {})[away] = {'date':datetime_korean.strftime("%#m/%#d"), 'diff':diff}
         oneroundmatchvs.setdefault(away, {})[home] = {'date':datetime_korean.strftime("%#m/%#d"), 'diff':-diff}
@@ -124,10 +127,80 @@ def lck_events_json_to_html():
 
         index += 1
 
-    upcomings.popitem()
     teams.sort(key=lambda x: (points[x], diffs[x]), reverse=True)
 
     str = HTML_HEAD
+
+    # upcoming events
+    str += '<table class="upcomings">\n'
+    str += '<colgroup><col class="date"><col class="time"><col class="team"><col class="vs"><col class="team"></colgroup>\n'
+    for date in upcomings.keys():
+        str += '<tr class="date"><td class="date'
+
+        match date.weekday():
+            case 5:
+                str += ' sat"'
+            case 6:
+                str += ' sun"'
+            case _:
+                str += '"'
+
+        str += f' rowspan="{len(upcomings[date])}">{date.strftime("%b %d %a")}</td>'
+
+        home = upcomings[date][0]["home"]
+        homeHue = (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
+        hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,90%)">{home}</td>'
+
+        away = upcomings[date][0]["away"]
+        awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
+        awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
+
+        str += f'<td class="time">{upcomings[date][0]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
+
+        for i in range(len(upcomings[date])-1):
+            home = upcomings[date][i+1]["home"]
+            homeHue = (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
+            hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,90%)">{home}</td>'
+
+            away = upcomings[date][i+1]["away"]
+            awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
+            awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
+
+            str += f'<tr><td class="time">{upcomings[date][i+1]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
+
+    str += "</table>\n\n"
+
+    # team schedules
+    str += '<table class="schedule">\n'
+    str += f'<colgroup><col class="team"><col span="{len(teams)-1}"><col span="{len(teams)-1}"><col class="pts"></colgroup>\n'
+    str += f'<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th class="pts">Pts</th></tr></thead>\n'
+
+    for team in teams:
+        str += f'<tr><th scope="row">{team}</th>'
+        for i in range(len(schedule[team])):
+            match = schedule[team][i]
+            if (i+1)%(len(teams)-1) == 0:
+                str += '<td class="roundlast '
+            else:
+                str += '<td class=" '
+            match match['diff']:
+                case 2:
+                    str += f'ww">{match["vs"]}</td>'
+                case 1:
+                    str += f'w">{match["vs"]}</td>'
+                case -1:
+                    str += f'l">{match["vs"]}</td>'
+                case -2:
+                    str += f'll">{match["vs"]}</td>'
+                case _:
+                    vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 10
+                    str += f'" style="background-color: hsl(50,100%,{vsLt}%)">{match["vs"]}</td>'
+
+        str += f'<td class="pts">{points[team]}</td></tr>\n'
+
+    str += "</table>\n\n"
+
+
     str += '<table class="vs">\n'
     str += f'<colgroup><col class="team"><col span="{len(teams)}"><col class="pts"></colgroup>\n'
     str += '<thead><tr><td> </td>'
@@ -200,72 +273,6 @@ def lck_events_json_to_html():
 
     str += '</div>\n\n'
 
-    str += '<table class="schedule">\n'
-    str += f'<colgroup><col class="team"><col span="{len(teams)-1}"><col span="{len(teams)-1}"><col class="pts"></colgroup>\n'
-    str += f'<thead><tr><td> </td><th colspan="{len(teams)-1}">Round 1</th><th colspan="{len(teams)-1}">Round 2</th><th class="pts">Pts</th></tr></thead>\n'
-
-    for team in teams:
-        str += f'<tr><th scope="row">{team}</th>'
-        for i in range(len(schedule[team])):
-            match = schedule[team][i]
-            if (i+1)%(len(teams)-1) == 0:
-                str += '<td class="roundlast '
-            else:
-                str += '<td class=" '
-            match match['diff']:
-                case 2:
-                    str += f'ww">{match["vs"]}</td>'
-                case 1:
-                    str += f'w">{match["vs"]}</td>'
-                case -1:
-                    str += f'l">{match["vs"]}</td>'
-                case -2:
-                    str += f'll">{match["vs"]}</td>'
-                case _:
-                    vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 10
-                    str += f'" style="background-color: hsl(50,100%,{vsLt}%)">{match["vs"]}</td>'
-
-        str += f'<td class="pts">{points[team]}</td></tr>\n'
-
-    str += "</table>\n\n"
-
-    str += '<div class="flex-container">\n<table class="upcomings">\n'
-    str += '<colgroup><col class="date"><col class="time"><col class="team"><col class="vs"><col class="team"></colgroup>\n'
-    for date in upcomings.keys():
-        str += '<tr class="date"><td class="date'
-
-        match date.weekday():
-            case 5:
-                str += ' sat"'
-            case 6:
-                str += ' sun"'
-            case _:
-                str += '"'
-
-        str += f' rowspan="{len(upcomings[date])}">{date.strftime("%b %d %a")}</td>'
-
-        home = upcomings[date][0]["home"]
-        homeHue = (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
-        hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,90%)">{home}</td>'
-
-        away = upcomings[date][0]["away"]
-        awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
-        awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
-
-        str += f'<td class="time">{upcomings[date][0]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
-
-        for i in range(len(upcomings[date])-1):
-            home = upcomings[date][i+1]["home"]
-            homeHue = (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
-            hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,90%)">{home}</td>'
-
-            away = upcomings[date][i+1]["away"]
-            awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
-            awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
-
-            str += f'<tr><td class="time">{upcomings[date][i+1]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
-
-    str += "</table>\n</div>\n\n"
     str += HTML_FOOT
 
     with open("results.html", "w") as html_file:
