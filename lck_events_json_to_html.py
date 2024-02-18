@@ -149,22 +149,22 @@ def lck_events_json_to_html():
 
         home = upcomings[date][0]["home"]
         homeHue = (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
-        hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,90%)">{home}</td>'
+        hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,92%)">{home}</td>'
 
         away = upcomings[date][0]["away"]
         awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
-        awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
+        awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,92%)">{away}</td>'
 
         str += f'<td class="time">{upcomings[date][0]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
 
         for i in range(len(upcomings[date])-1):
             home = upcomings[date][i+1]["home"]
             homeHue = (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
-            hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,90%)">{home}</td>'
+            hometd= f'<td class="team" style="background-color: hsl({homeHue},100%,92%)">{home}</td>'
 
             away = upcomings[date][i+1]["away"]
             awayHue = (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * HIGH_LOW + LOW
-            awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,90%)">{away}</td>'
+            awaytd= f'<td class="team" style="background-color: hsl({awayHue},100%,92%)">{away}</td>'
 
             str += f'<tr><td class="time">{upcomings[date][i+1]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
 
@@ -193,7 +193,7 @@ def lck_events_json_to_html():
                 case -2:
                     str += f'll">{match["vs"]}</td>'
                 case _:
-                    vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 10
+                    vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
                     str += f'" style="background-color: hsl(50,100%,{vsLt}%)">{match["vs"]}</td>'
 
         str += f'<td class="pts">{points[team]}</td></tr>\n'
