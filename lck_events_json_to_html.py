@@ -11,7 +11,11 @@ timezone_korean = timezone(timedelta(hours=9))
 HTML_HEAD = '''<!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
 <style>
+body {font-family: "Short Stack"; font-size: 16px;}
 .flex-container {display: flex; flex-flow: row wrap;}
 caption {font-weight: bold;}
 table {margin: 10px;}
@@ -25,7 +29,7 @@ td {text-align: center;}
 col {width: 38px;}
 col.team {width: 42px;}
 col.pts {width: 32px;}
-col.date {width: 104px;}
+col.date {width: 112px;}
 col.time {width: 50px;}
 col.vs {width: 30px;}
 
@@ -41,7 +45,7 @@ table.schedule td.pts, td.roundfirst {border-left: 1px solid #aaa;}
 
 table.upcomings {border-top: 2px solid black;}
 table.upcomings td.date {text-align: left; vertical-align: top;}
-table.upcomings td.time {text-align: left;}
+table.upcomings td.time {text-align: center; padding-right: 5px;}
 table.upcomings td.team {font-weight: bold;}
 td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
@@ -129,7 +133,7 @@ def lck_events_json_to_html():
                         str += ' sun"'
                     case _:
                         str += '"'
-                str += f' rowspan="{len(upcomings[date])}">{date.strftime("%b %d %a")}</td>'
+                str += f' rowspan="{len(upcomings[date])}">{date.strftime("%a, %d %b")}</td>'
             else:
                 str += '<tr>'
 
