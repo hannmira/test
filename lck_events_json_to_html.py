@@ -31,7 +31,7 @@ col.vs {width: 30px;}
 
 td.ww {background-color: hsl(200, 100%, 80%);}
 td.w {background-color: hsl(200, 100%, 90%);}
-td.wl, td.lw {background-color: hsl(40, 100%, 80%);}
+td.wl, td.lw {background-color: hsl(50, 100%, 80%);}
 td.l {background-color: hsl(20, 100%, 90%);}
 td.ll {background-color: hsl(20, 100%, 80%);}
 td.na {background-color: #eee;}
@@ -135,11 +135,11 @@ def lck_events_json_to_html():
 
             home = upcomings[date][i]["home"]
             homeLt = 100 - (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-            hometd= f'<td class="team" style="background-color: hsl(40,100%,{homeLt}%)">{home}</td>'
+            hometd= f'<td class="team" style="background-color: hsl(50,100%,{homeLt}%)">{home}</td>'
 
             away = upcomings[date][i]["away"]
             awayLt = 100 - (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-            awaytd= f'<td class="team" style="background-color: hsl(40,100%,{awayLt}%)">{away}</td>'
+            awaytd= f'<td class="team" style="background-color: hsl(50,100%,{awayLt}%)">{away}</td>'
 
             str += f'<td class="time">{upcomings[date][i]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
 
@@ -174,7 +174,7 @@ def lck_events_json_to_html():
                     str += f'll">{match["vs"]}</td>'
                 case _:
                     vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-                    str += f'" style="background-color: hsl(40,100%,{vsLt}%)">{match["vs"]}</td>'
+                    str += f'" style="background-color: hsl(50,100%,{vsLt}%)">{match["vs"]}</td>'
 
         str += f'<td class="pts">{points[team]}</td></tr>\n'
 
