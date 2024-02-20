@@ -9,7 +9,7 @@ from datetime import datetime, timezone, timedelta
 timezone_korean = timezone(timedelta(hours=9))
 
 HTML_HEAD = '''<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,12 +27,9 @@ thead tr, tr:last-of-type {border-bottom: 2px solid black;}
 th {text-align: center;}
 td {text-align: center;}
 
-col {width: 38px;}
-col.team {width: 42px;}
+col.th {width: 42px;}
+col.team {width: 38px;}
 col.pts {width: 32px;}
-col.date {width: 112px;}
-col.time {width: 50px;}
-col.vs {width: 30px;}
 
 td.ww {background-color: hsl(200, 100%, 80%);}
 td.w {background-color: hsl(200, 100%, 90%);}
@@ -40,14 +37,15 @@ td.wl, td.lw {background-color: hsl(50, 100%, 80%);}
 td.l {background-color: hsl(20, 100%, 90%);}
 td.ll {background-color: hsl(20, 100%, 80%);}
 td.na {background-color: #eee;}
-td.pts {font-weight: bold;}
+td.pts {font-weight: bold; padding-left: 4px; padding-right: 4px;}
+th.pts {padding-left: 2px; padding-right: 2px;}
 
 table.schedule td.pts, td.roundfirst {border-left: 1px solid #aaa;}
 
 table.upcomings {border-top: 2px solid black;}
-table.upcomings td.date {text-align: left; vertical-align: top;}
+table.upcomings td.date {text-align: left; vertical-align: top; padding-right: 8px;}
 table.upcomings td.time {text-align: center; padding-right: 4px;}
-table.upcomings td.team {font-weight: bold;}
+table.upcomings td.vs {text-align: center; padding-left: 4px; padding-right: 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
 </style>
@@ -122,7 +120,7 @@ def lck_events_json_to_html():
 
     # upcoming events
     str += '<table class="upcomings">\n'
-    str += '<colgroup><col class="date"><col class="time"><col class="team"><col class="vs"><col class="team"></colgroup>\n'
+    str += '<colgroup><col class="date"><col class="time"><col class="th"><col class="vs"><col class="th"></colgroup>\n'
     for date in upcomings.keys():
         for i in range(len(upcomings[date])):
             if i == 0:
@@ -140,19 +138,19 @@ def lck_events_json_to_html():
 
             home = upcomings[date][i]["home"]
             homeLt = 100 - (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-            hometd= f'<td class="team" style="background-color: hsl(50,100%,{homeLt}%)">{home}</td>'
+            hometd= f'<th class="team" style="background-color: hsl(50,100%,{homeLt}%)">{home}</td>'
 
             away = upcomings[date][i]["away"]
             awayLt = 100 - (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-            awaytd= f'<td class="team" style="background-color: hsl(50,100%,{awayLt}%)">{away}</td>'
+            awaytd= f'<th class="team" style="background-color: hsl(50,100%,{awayLt}%)">{away}</td>'
 
-            str += f'<td class="time">{upcomings[date][i]["time"]}</td>{hometd}<td>vs</td>{awaytd}</tr>\n'
+            str += f'<td class="time">{upcomings[date][i]["time"]}</td>{hometd}<td class="vs">vs</td>{awaytd}</tr>\n'
 
     str += "</table>\n\n"
 
     # team schedules
     str += '<table class="schedule">\n'
-    str += f'<colgroup><col class="team"><col span="{len(teams)-1}"><col span="{len(teams)-1}"><col class="pts"></colgroup>\n'
+    str += f'<colgroup><col class="th"><col class="team" span="{len(teams)-1}"><col class="team" span="{len(teams)-1}"><col class="pts"></colgroup>\n'
     str += '<thead><tr><td> </td>'
     for i in range(len(schedule[teams[0]])):
         if i % (len(teams)-1) == 0:
@@ -187,7 +185,7 @@ def lck_events_json_to_html():
 
     # team vs
     str += '<table class="vs">\n'
-    str += f'<colgroup><col class="team"><col span="{len(teams)}"><col class="pts"></colgroup>\n'
+    str += f'<colgroup><col class="th"><col class="team" span="{len(teams)}"><col class="pts"></colgroup>\n'
     str += '<thead><tr><td> </td>'
 
     for team in teams:
