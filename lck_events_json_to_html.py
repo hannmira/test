@@ -90,10 +90,11 @@ def lck_events_json_to_html():
 
         home = event['match']['teams'][0]['code']
         away = event['match']['teams'][1]['code']
+        alink = f"<a href='https://oracleselixir.com/matches/{event['match']['id']}' target='_blank'>"
 
         today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone_korean)
         if datetime_korean >= today_midnight and datetime_korean < today_midnight + timedelta(days=7):
-            upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away})
+            upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "alink":alink})
 
         if event['match']['teams'][0]['result']['outcome']:
             point = 1 if event['match']['teams'][0]['result']['outcome'] == 'win' else -1
@@ -105,15 +106,15 @@ def lck_events_json_to_html():
             diffs[home] = diffs.setdefault(home, 0) + diff
             diffs[away] = diffs.setdefault(away, 0) - diff
 
-            schedule.setdefault(home, []).append({'vs':away, 'diff':diff, 'id':event['match']['id']})
-            schedule.setdefault(away, []).append({'vs':home, 'diff':-diff, 'id':event['match']['id']})
+            schedule.setdefault(home, []).append({'vs':away, 'diff':diff, 'alink':alink})
+            schedule.setdefault(away, []).append({'vs':home, 'diff':-diff, 'alink':alink})
 
             h2h.setdefault(home, {}).setdefault(away, []).append(point)
             h2h.setdefault(away, {}).setdefault(home, []).append(-point)
 
         else:
-            schedule.setdefault(home, []).append({'vs':away, 'diff':None, 'id':event['match']['id']})
-            schedule.setdefault(away, []).append({'vs':home, 'diff':None, 'id':event['match']['id']})
+            schedule.setdefault(home, []).append({'vs':away, 'diff':None, 'alink':alink})
+            schedule.setdefault(away, []).append({'vs':home, 'diff':None, 'alink':alink})
 
     teams.sort(key=lambda x: (points[x], diffs[x]), reverse=True)
 
@@ -137,15 +138,17 @@ def lck_events_json_to_html():
             else:
                 str += '<tr>'
 
+            alink = upcomings[date][i]["alink"]
+
             home = upcomings[date][i]["home"]
             homeLt = 100 - (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-            hometd= f'<th class="team" style="background-color: hsl(50,100%,{homeLt}%)">{home}</td>'
+            hometd= f'<th class="team" style="background-color: hsl(50,100%,{homeLt}%)">{alink}{home}</a></td>'
 
             away = upcomings[date][i]["away"]
             awayLt = 100 - (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-            awaytd= f'<th class="team" style="background-color: hsl(50,100%,{awayLt}%)">{away}</td>'
+            awaytd= f'<th class="team" style="background-color: hsl(50,100%,{awayLt}%)">{alink}{away}</a></td>'
 
-            str += f'<td class="time">{upcomings[date][i]["time"]}</td>{hometd}<td class="vs">vs</td>{awaytd}</tr>\n'
+            str += f'<td class="time">{alink}{upcomings[date][i]["time"]}</a></td>{hometd}<td class="vs">{alink}vs</a></td>{awaytd}</tr>\n'
 
     str += "</table>\n\n"
 
@@ -179,7 +182,7 @@ def lck_events_json_to_html():
                 case _:
                     vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
                     str += f'" style="background-color: hsl(50,100%,{vsLt}%)">'
-            str += f'<a href="https://oracleselixir.com/matches/{match["id"]}" target="_blank">{match["vs"]}</a></td>'
+            str += f'{match["alink"]}{match["vs"]}</a></td>'
 
         str += f'<td class="pts">{points[team]}</td></tr>\n'
 
