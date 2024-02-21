@@ -19,6 +19,7 @@ HTML_HEAD = '''<!DOCTYPE html>
 body {font-family: "Short Stack"; font-size: 16px;}
 .flex-container {display: flex; flex-flow: row wrap;}
 caption {font-weight: bold;}
+a {color: black; text-decoration: none;}
 table {margin: 10px;}
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
@@ -67,7 +68,7 @@ def lck_events_json_to_html():
     with open('lck_events.json', 'r') as f:
         events = json.load(f)
 
-    matchvs = {}
+    h2h = {}
     schedule = {}
     points = {}
     diffs = {}
@@ -104,15 +105,15 @@ def lck_events_json_to_html():
             diffs[home] = diffs.setdefault(home, 0) + diff
             diffs[away] = diffs.setdefault(away, 0) - diff
 
-            matchvs.setdefault(home, {}).setdefault(away, []).append(point)
-            matchvs.setdefault(away, {}).setdefault(home, []).append(-point)
+            schedule.setdefault(home, []).append({'vs':away, 'diff':diff, 'id':event['match']['id']})
+            schedule.setdefault(away, []).append({'vs':home, 'diff':-diff, 'id':event['match']['id']})
 
-            schedule.setdefault(home, []).append({'vs':away, 'diff':diff})
-            schedule.setdefault(away, []).append({'vs':home, 'diff':-diff})
+            h2h.setdefault(home, {}).setdefault(away, []).append(point)
+            h2h.setdefault(away, {}).setdefault(home, []).append(-point)
 
         else:
-            schedule.setdefault(home, []).append({'vs':away, 'diff':None})
-            schedule.setdefault(away, []).append({'vs':home, 'diff':None})
+            schedule.setdefault(home, []).append({'vs':away, 'diff':None, 'id':event['match']['id']})
+            schedule.setdefault(away, []).append({'vs':home, 'diff':None, 'id':event['match']['id']})
 
     teams.sort(key=lambda x: (points[x], diffs[x]), reverse=True)
 
@@ -168,22 +169,23 @@ def lck_events_json_to_html():
                 str += '<td class=" '
             match match['diff']:
                 case 2:
-                    str += f'ww">{match["vs"]}</td>'
+                    str += 'ww">'
                 case 1:
-                    str += f'w">{match["vs"]}</td>'
+                    str += 'w">'
                 case -1:
-                    str += f'l">{match["vs"]}</td>'
+                    str += 'l">'
                 case -2:
-                    str += f'll">{match["vs"]}</td>'
+                    str += 'll">'
                 case _:
                     vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-                    str += f'" style="background-color: hsl(50,100%,{vsLt}%)">{match["vs"]}</td>'
+                    str += f'" style="background-color: hsl(50,100%,{vsLt}%)">'
+            str += f'<a href="https://oracleselixir.com/matches/{match["id"]}" target="_blank">{match["vs"]}</a></td>'
 
         str += f'<td class="pts">{points[team]}</td></tr>\n'
 
     str += "</table>\n\n"
 
-    # team vs
+    # h2h
     str += '<table class="vs">\n'
     str += f'<colgroup><col class="th"><col class="team" span="{len(teams)}"><col class="pts"></colgroup>\n'
     str += '<thead><tr><td> </td>'
@@ -202,7 +204,7 @@ def lck_events_json_to_html():
 
             text = ''
             style = ''
-            for point in matchvs[team].get(vs) or []:
+            for point in h2h[team].get(vs) or []:
                 if point == 1:
                     text = text + '-' + 'W' if text else 'W'
                     style += 'w'
