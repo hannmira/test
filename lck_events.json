@@ -1,149 +1,5 @@
 [
     {
-        "startTime": "2023-06-21T10:30:00Z",
-        "state": "completed",
-        "type": "match",
-        "blockName": "Week 3",
-        "league": {
-            "name": "LCK",
-            "slug": "lck"
-        },
-        "match": {
-            "id": "110371551279081820",
-            "flags": [
-                "hasVod"
-            ],
-            "teams": [
-                {
-                    "name": "Kwangdong Freecs",
-                    "code": "KDF",
-                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
-                    "result": {
-                        "outcome": "loss",
-                        "gameWins": 0
-                    },
-                    "record": {
-                        "wins": 4,
-                        "losses": 14
-                    }
-                },
-                {
-                    "name": "T1",
-                    "code": "T1",
-                    "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
-                    "result": {
-                        "outcome": "win",
-                        "gameWins": 2
-                    },
-                    "record": {
-                        "wins": 9,
-                        "losses": 9
-                    }
-                }
-            ],
-            "strategy": {
-                "type": "bestOf",
-                "count": 3
-            }
-        }
-    },
-    {
-        "startTime": "2023-06-22T08:00:00Z",
-        "state": "completed",
-        "type": "match",
-        "blockName": "Week 3",
-        "league": {
-            "name": "LCK",
-            "slug": "lck"
-        },
-        "match": {
-            "id": "110371551278950592",
-            "flags": [
-                "hasVod"
-            ],
-            "teams": [
-                {
-                    "name": "Gen.G",
-                    "code": "GEN",
-                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
-                    "result": {
-                        "outcome": "win",
-                        "gameWins": 2
-                    },
-                    "record": {
-                        "wins": 16,
-                        "losses": 2
-                    }
-                },
-                {
-                    "name": "DRX",
-                    "code": "DRX",
-                    "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
-                    "result": {
-                        "outcome": "loss",
-                        "gameWins": 0
-                    },
-                    "record": {
-                        "wins": 6,
-                        "losses": 12
-                    }
-                }
-            ],
-            "strategy": {
-                "type": "bestOf",
-                "count": 3
-            }
-        }
-    },
-    {
-        "startTime": "2023-06-22T10:30:00Z",
-        "state": "completed",
-        "type": "match",
-        "blockName": "Week 3",
-        "league": {
-            "name": "LCK",
-            "slug": "lck"
-        },
-        "match": {
-            "id": "110371551279016168",
-            "flags": [
-                "hasVod"
-            ],
-            "teams": [
-                {
-                    "name": "kt Rolster",
-                    "code": "KT",
-                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
-                    "result": {
-                        "outcome": "win",
-                        "gameWins": 2
-                    },
-                    "record": {
-                        "wins": 17,
-                        "losses": 1
-                    }
-                },
-                {
-                    "name": "Dplus Kia",
-                    "code": "DK",
-                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
-                    "result": {
-                        "outcome": "loss",
-                        "gameWins": 0
-                    },
-                    "record": {
-                        "wins": 11,
-                        "losses": 7
-                    }
-                }
-            ],
-            "strategy": {
-                "type": "bestOf",
-                "count": 3
-            }
-        }
-    },
-    {
         "startTime": "2023-06-23T08:00:00Z",
         "state": "completed",
         "type": "match",
@@ -3878,7 +3734,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 }
             ],
@@ -3925,7 +3781,7 @@
                         "gameWins": 1
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 }
@@ -4009,7 +3865,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -4056,7 +3912,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 },
@@ -4104,7 +3960,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -4201,7 +4057,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -4248,7 +4104,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 },
@@ -4310,7 +4166,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 }
             ],
@@ -4357,7 +4213,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -4393,7 +4249,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -4454,7 +4310,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 }
             ],
@@ -4537,7 +4393,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -4549,7 +4405,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 }
@@ -4694,7 +4550,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 }
             ],
@@ -4776,7 +4632,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 },
@@ -4789,7 +4645,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 }
@@ -4873,7 +4729,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -4920,7 +4776,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -4980,7 +4836,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 }
             ],
@@ -5075,7 +4931,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -5124,7 +4980,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 }
             ],
@@ -5158,7 +5014,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -5207,7 +5063,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -5219,7 +5075,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -5303,7 +5159,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -5398,7 +5254,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -5446,7 +5302,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 },
@@ -5495,7 +5351,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -5508,7 +5364,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 }
             ],
@@ -5577,7 +5433,9 @@
         },
         "match": {
             "id": "111561337007239917",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "Gen.G",
@@ -5601,7 +5459,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -5623,7 +5481,9 @@
         },
         "match": {
             "id": "111561337007239821",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "Dplus Kia",
@@ -5669,7 +5529,9 @@
         },
         "match": {
             "id": "111561337007305529",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "FearX",
@@ -5693,7 +5555,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 }
@@ -5715,7 +5577,9 @@
         },
         "match": {
             "id": "111561337007239909",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "NongShim REDFORCE",
@@ -5727,7 +5591,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -5752,7 +5616,7 @@
     },
     {
         "startTime": "2024-02-21T08:00:00Z",
-        "state": "unstarted",
+        "state": "completed",
         "type": "match",
         "blockName": "Week 5",
         "league": {
@@ -5761,18 +5625,20 @@
         },
         "match": {
             "id": "111561337007305533",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "T1",
                     "code": "T1",
                     "image": "http://static.lolesports.com/teams/1704375161752_T1_esports.png",
                     "result": {
-                        "outcome": null,
-                        "gameWins": 0
+                        "outcome": "win",
+                        "gameWins": 2
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -5781,12 +5647,12 @@
                     "code": "NS",
                     "image": "http://static.lolesports.com/teams/NSFullonDark.png",
                     "result": {
-                        "outcome": null,
-                        "gameWins": 0
+                        "outcome": "loss",
+                        "gameWins": 1
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 }
             ],
@@ -5798,7 +5664,7 @@
     },
     {
         "startTime": "2024-02-21T10:30:00Z",
-        "state": "unstarted",
+        "state": "completed",
         "type": "match",
         "blockName": "Week 5",
         "league": {
@@ -5807,32 +5673,34 @@
         },
         "match": {
             "id": "111561337007239941",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
-                {
-                    "name": "kt Rolster",
-                    "code": "KT",
-                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
-                    "result": {
-                        "outcome": null,
-                        "gameWins": 0
-                    },
-                    "record": {
-                        "wins": 6,
-                        "losses": 2
-                    }
-                },
                 {
                     "name": "Hanwha Life Esports",
                     "code": "HLE",
                     "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
                     "result": {
-                        "outcome": null,
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 7,
+                        "losses": 2
+                    }
+                },
+                {
+                    "name": "kt Rolster",
+                    "code": "KT",
+                    "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
+                    "result": {
+                        "outcome": "loss",
                         "gameWins": 0
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 }
             ],
@@ -5844,7 +5712,7 @@
     },
     {
         "startTime": "2024-02-22T08:00:00Z",
-        "state": "unstarted",
+        "state": "inProgress",
         "type": "match",
         "blockName": "Week 5",
         "league": {
@@ -5856,9 +5724,9 @@
             "flags": [],
             "teams": [
                 {
-                    "name": "FearX",
-                    "code": "FOX",
-                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
                     "result": {
                         "outcome": null,
                         "gameWins": 0
@@ -5869,9 +5737,9 @@
                     }
                 },
                 {
-                    "name": "Dplus Kia",
-                    "code": "DK",
-                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
                     "result": {
                         "outcome": null,
                         "gameWins": 0
@@ -6003,7 +5871,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -6015,7 +5883,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -6048,7 +5916,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -6062,7 +5930,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 }
             ],
@@ -6278,7 +6146,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -6371,7 +6239,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -6429,7 +6297,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -6463,7 +6331,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -6509,7 +6377,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -6554,7 +6422,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -6601,7 +6469,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -6646,7 +6514,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 },
@@ -6738,7 +6606,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 },
@@ -6784,7 +6652,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -6844,7 +6712,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 }
             ],
@@ -6876,7 +6744,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 },
@@ -6923,7 +6791,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -6968,7 +6836,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -7061,7 +6929,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -7074,7 +6942,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 }
             ],
@@ -7165,7 +7033,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -7198,7 +7066,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -7291,7 +7159,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -7337,7 +7205,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -7382,7 +7250,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -7395,7 +7263,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -7475,7 +7343,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -7521,7 +7389,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -7658,7 +7526,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -7672,7 +7540,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 }
             ],
@@ -7705,7 +7573,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 },
                 {
@@ -7717,7 +7585,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 }
@@ -7843,7 +7711,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 6
+                        "losses": 7
                     }
                 },
                 {
@@ -7888,7 +7756,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 6,
+                        "wins": 7,
                         "losses": 2
                     }
                 },
@@ -7934,7 +7802,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 7,
+                        "wins": 8,
                         "losses": 1
                     }
                 },
@@ -8040,7 +7908,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 2
+                        "losses": 3
                     }
                 }
             ],

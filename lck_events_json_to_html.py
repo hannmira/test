@@ -21,6 +21,7 @@ body {font-family: "Short Stack"; font-size: 16px;}
 caption {font-weight: bold;}
 a {color: black; text-decoration: none;}
 table {margin: 10px;}
+div table {margin: 0 10px;}
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
 thead tr, tr:last-of-type {border-bottom: 2px solid black;}
@@ -49,6 +50,8 @@ table.upcomings td.time {text-align: center; padding-right: 4px;}
 table.upcomings td.vs {text-align: center; padding-left: 4px; padding-right: 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
+
+tr.datetime {border-bottom: 1px solid #aaa;}
 </style>
 </head>
 <body>
@@ -74,13 +77,14 @@ def lck_events_json_to_html():
     diffs = {}
     teams = ['GEN', 'T1', 'KT', 'HLE', 'DK', 'DRX', 'FOX', 'BRO', 'NS', 'KDF']
     upcomings = {}
+    playoffs = {}
 
     for event in events:
         if convert_to_datetime(event['startTime']) < datetime(2024, 1, 1):
             continue
         if event['type'] != 'match':
             continue
-        if not event['blockName'].startswith('Week'):
+        if not event['blockName'].startswith('Week') and not event['blockName'].startswith('Playoffs'):
             continue
 
         # 문자열을 datetime 객체로 변환
@@ -96,9 +100,13 @@ def lck_events_json_to_html():
         if datetime_korean >= today_midnight and datetime_korean < today_midnight + timedelta(days=7):
             upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "alink":alink})
 
-        if event['match']['teams'][0]['result']['outcome']:
+        if event['match']['teams'][0]['result'] and event['match']['teams'][0]['result']['outcome']:
             point = 1 if event['match']['teams'][0]['result']['outcome'] == 'win' else -1
             diff = event['match']['teams'][0]['result']['gameWins'] - event['match']['teams'][1]['result']['gameWins']
+
+            if event['blockName'].startswith('Playoffs'):
+                playoffs.setdefault(event['blockName'], []).append({'datetime': datetime_korean, "home":home, "away":away, 'diff':diff, "alink":alink})
+                continue
 
             points[home] = points.setdefault(home, 0) + point
             points[away] = points.setdefault(away, 0) - point
@@ -113,6 +121,9 @@ def lck_events_json_to_html():
             h2h.setdefault(away, {}).setdefault(home, []).append(-point)
 
         else:
+            if event['blockName'].startswith('Playoffs'):
+                playoffs.setdefault(event['blockName'], []).append({'datetime': datetime_korean, "home":home, "away":away, 'diff':None, "alink":alink})
+                continue
             schedule.setdefault(home, []).append({'vs':away, 'diff':None, 'alink':alink})
             schedule.setdefault(away, []).append({'vs':home, 'diff':None, 'alink':alink})
 
@@ -151,6 +162,23 @@ def lck_events_json_to_html():
             str += f'<td class="time">{alink}{upcomings[date][i]["time"]}</a></td>{hometd}<td class="vs">{alink}vs</a></td>{awaytd}</tr>\n'
 
     str += "</table>\n\n"
+
+    # playoffs
+    str += '<div style="display:flex">\n'
+    for round in playoffs.keys():
+        str += f'<table>\n<thead><tr><th colspan="3">{round}</th></tr></thead>\n'
+        for round_data in playoffs[round]:
+            str += '<tr class="datetime"><td colspan="3"'
+            match round_data["datetime"].weekday():
+                case 5:
+                    str += ' class="sat"'
+                case 6:
+                    str += ' class="sun"'
+            str += f'>{round_data["datetime"].strftime("%a, %d %b %H:%M")}</td></tr>\n'
+            str += f'<tr class="match"><td>{round_data["home"]}</td><td>vs</td><td>{round_data["away"]}</td></tr>'
+        str += "</table>\n"
+
+    str += '</div>\n\n'
 
     # team schedules
     str += '<table class="schedule">\n'
