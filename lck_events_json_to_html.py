@@ -17,11 +17,13 @@ HTML_HEAD = '''<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
 <style>
 body {font-family: "Short Stack"; font-size: 16px;}
-.flex-container {display: flex; flex-flow: row wrap;}
-caption {font-weight: bold;}
 a {color: black; text-decoration: none;}
-table {margin: 10px;}
-div table {margin: 0 10px;}
+table {margin: 1em;}
+caption {font-weight: bold;}
+
+div.flex-container {display: flex; flex-flow: row wrap;}
+div table {margin: 0 0.5em;}
+
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
 thead tr, tr:last-of-type {border-bottom: 2px solid black;}
@@ -32,6 +34,7 @@ td {text-align: center;}
 col.th {width: 42px;}
 col.team {width: 38px;}
 col.pts {width: 32px;}
+table.playoffs col.team {width: 62px;}
 
 td.ww {background-color: hsl(200, 100%, 80%);}
 td.w {background-color: hsl(200, 100%, 90%);}
@@ -94,7 +97,7 @@ def lck_events_json_to_html():
 
         home = event['match']['teams'][0]['code']
         away = event['match']['teams'][1]['code']
-        alink = f"<a href='https://oracleselixir.com/matches/{event['match']['id']}' target='_blank'>"
+        alink = f'<a href="https://oracleselixir.com/matches/{event["match"]["id"]}" target="_blank">'
 
         today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone_korean)
         if datetime_korean >= today_midnight and datetime_korean < today_midnight + timedelta(days=7):
@@ -166,7 +169,7 @@ def lck_events_json_to_html():
     # playoffs
     str += '<div style="display:flex">\n'
     for round in playoffs.keys():
-        str += f'<table>\n<thead><tr><th colspan="3">{round}</th></tr></thead>\n'
+        str += f'<table class="playoffs">\n<colgroup><col class="team"><col><col class="team"></colgroup>\n<thead><tr><th colspan="3">{round}</th></tr></thead>\n'
         for round_data in playoffs[round]:
             str += '<tr class="datetime"><td colspan="3"'
             match round_data["datetime"].weekday():
@@ -175,7 +178,7 @@ def lck_events_json_to_html():
                 case 6:
                     str += ' class="sun"'
             str += f'>{round_data["datetime"].strftime("%a, %d %b %H:%M")}</td></tr>\n'
-            str += f'<tr class="match"><td>{round_data["home"]}</td><td>vs</td><td>{round_data["away"]}</td></tr>'
+            str += f'<tr class="match"><th>{round_data["home"]}</th><td>vs</td><th>{round_data["away"]}</th></tr>'
         str += "</table>\n"
 
     str += '</div>\n\n'
