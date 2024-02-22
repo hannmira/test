@@ -2,6 +2,7 @@
 *.vscode
 *__pycache__
 example.py
+git acp.bat
 lolesports_api.py
 README.md
 test_lolesports_api.py
