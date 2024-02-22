@@ -37,11 +37,6 @@ col.team {width: 38px;}
 col.pts {width: 32px;}
 table.playoffs col.team {width: 62px;}
 
-td.ww {background-color: hsl(200, 100%, 80%);}
-td.w {background-color: hsl(200, 100%, 90%);}
-td.wl, td.lw {background-color: hsl(50, 100%, 80%);}
-td.l {background-color: hsl(20, 100%, 90%);}
-td.ll {background-color: hsl(20, 100%, 80%);}
 td.na {background-color: #eee;}
 td.pts {font-weight: bold; padding-left: 4px; padding-right: 4px;}
 th.pts {padding-left: 2px; padding-right: 2px;}
@@ -64,6 +59,10 @@ tr.datetime {border-bottom: 1px solid #aaa;}
 HTML_FOOT = '''</body>
 </html>'''
 
+points = {}
+diffs = {}
+teams = ['GEN', 'T1', 'KT', 'HLE', 'DK', 'DRX', 'FOX', 'BRO', 'NS', 'KDF']
+
 def convert_to_datetime(date_string):
     try:
         datetime_obj = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%fZ")
@@ -71,15 +70,25 @@ def convert_to_datetime(date_string):
         datetime_obj = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%SZ")
     return datetime_obj
 
+def team_style(team, diff):
+    if diff > 0:
+        return f'"background-color: hsl(200, 100%, {100-diff*10}%)"'
+    elif diff < 0:
+        return f'"background-color: hsl(20, 100%, {100+diff*10}%)"'
+    elif team in points:
+        Lt = 100 - (points[team]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
+        return f'"background-color: hsl(50,100%,{Lt}%)"'
+    elif team:
+        return '""'
+    else:
+        return '"background-color: hsl(50, 100%, 80%)"'
+
 def lck_events_json_to_html():
     with open('lck_events.json', 'r') as f:
         events = json.load(f)
 
     h2h = {}
     schedule = {}
-    points = {}
-    diffs = {}
-    teams = ['GEN', 'T1', 'KT', 'HLE', 'DK', 'DRX', 'FOX', 'BRO', 'NS', 'KDF']
     upcomings = {}
     playoffs = {}
 
@@ -96,40 +105,36 @@ def lck_events_json_to_html():
         # 한국 시간대는 UTC+9
         datetime_korean = datetime_utc.astimezone(timezone_korean)
 
+        diff = 0
+        point = 0
         home = event['match']['teams'][0]['code']
         away = event['match']['teams'][1]['code']
         alink = f'<a href="https://oracleselixir.com/matches/{event["match"]["id"]}" target="_blank">'
-
-        today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone_korean)
-        if datetime_korean >= today_midnight and datetime_korean < today_midnight + timedelta(days=7):
-            upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "alink":alink})
 
         if event['match']['teams'][0]['result'] and event['match']['teams'][0]['result']['outcome']:
             point = 1 if event['match']['teams'][0]['result']['outcome'] == 'win' else -1
             diff = event['match']['teams'][0]['result']['gameWins'] - event['match']['teams'][1]['result']['gameWins']
 
-            if event['blockName'].startswith('Playoffs'):
-                playoffs.setdefault(event['blockName'], []).append({'datetime': datetime_korean, "home":home, "away":away, 'diff':diff, "alink":alink})
-                continue
+        today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone_korean)
+        if datetime_korean >= today_midnight and datetime_korean < today_midnight + timedelta(days=7):
+            upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "diff":diff, "alink":alink})
 
+        if event['blockName'].startswith('Playoffs'):
+            playoffs.setdefault(event['blockName'], []).append({'datetime': datetime_korean, "home":home, "away":away, 'diff':diff, "alink":alink})
+            continue
+
+        schedule.setdefault(home, []).append({'vs':away, 'diff':diff, 'alink':alink})
+        schedule.setdefault(away, []).append({'vs':home, 'diff':-diff, 'alink':alink})
+
+        if point and diff:
             points[home] = points.setdefault(home, 0) + point
             points[away] = points.setdefault(away, 0) - point
 
             diffs[home] = diffs.setdefault(home, 0) + diff
             diffs[away] = diffs.setdefault(away, 0) - diff
 
-            schedule.setdefault(home, []).append({'vs':away, 'diff':diff, 'alink':alink})
-            schedule.setdefault(away, []).append({'vs':home, 'diff':-diff, 'alink':alink})
-
             h2h.setdefault(home, {}).setdefault(away, []).append(point)
             h2h.setdefault(away, {}).setdefault(home, []).append(-point)
-
-        else:
-            if event['blockName'].startswith('Playoffs'):
-                playoffs.setdefault(event['blockName'], []).append({'datetime': datetime_korean, "home":home, "away":away, 'diff':None, "alink":alink})
-                continue
-            schedule.setdefault(home, []).append({'vs':away, 'diff':None, 'alink':alink})
-            schedule.setdefault(away, []).append({'vs':home, 'diff':None, 'alink':alink})
 
     teams.sort(key=lambda x: (points[x], diffs[x]), reverse=True)
 
@@ -156,12 +161,10 @@ def lck_events_json_to_html():
             alink = upcomings[date][i]["alink"]
 
             home = upcomings[date][i]["home"]
-            homeLt = 100 - (points[home]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-            hometd= f'<th class="team" style="background-color: hsl(50,100%,{homeLt}%)">{alink}{home}</a></td>'
+            hometd= f'<th class="team" style={team_style(home, upcomings[date][i]["diff"])}>{alink}{home}</a></td>'
 
             away = upcomings[date][i]["away"]
-            awayLt = 100 - (points[away]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-            awaytd= f'<th class="team" style="background-color: hsl(50,100%,{awayLt}%)">{alink}{away}</a></td>'
+            awaytd= f'<th class="team" style={team_style(away, -upcomings[date][i]["diff"])}>{alink}{away}</a></td>'
 
             str += f'<td class="time">{alink}{upcomings[date][i]["time"]}</a></td>{hometd}<td class="vs">{alink}vs</a></td>{awaytd}</tr>\n'
 
@@ -179,7 +182,7 @@ def lck_events_json_to_html():
                 case 6:
                     str += ' class="sun"'
             str += f'>{round_data["datetime"].strftime("%a, %d %b %H:%M")}</td></tr>\n'
-            str += f'<tr class="match"><th>{round_data["home"]}</th><td>vs</td><th>{round_data["away"]}</th></tr>'
+            str += f'<tr class="match"><th style={team_style(round_data["home"], round_data["diff"])}>{round_data["home"]}</th><td>vs</td><th style={team_style(round_data["away"], -round_data["diff"])}>{round_data["away"]}</th></tr>'
         str += "</table>\n"
 
     str += '</div>\n\n'
@@ -199,22 +202,11 @@ def lck_events_json_to_html():
         for i in range(len(schedule[team])):
             match = schedule[team][i]
             if i % (len(teams)-1) == 0:
-                str += '<td class="roundfirst '
+                str += '<td class="roundfirst"'
             else:
-                str += '<td class=" '
-            match match['diff']:
-                case 2:
-                    str += 'ww">'
-                case 1:
-                    str += 'w">'
-                case -1:
-                    str += 'l">'
-                case -2:
-                    str += 'll">'
-                case _:
-                    vsLt = 100 - (points[match["vs"]]-points[teams[-1]])/(points[teams[0]]-points[teams[-1]]) * 20
-                    str += f'" style="background-color: hsl(50,100%,{vsLt}%)">'
-            str += f'{match["alink"]}{match["vs"]}</a></td>'
+                str += '<td'
+
+            str += f' style={team_style(match["vs"], match["diff"])}>{match["alink"]}{match["vs"]}</a></td>'
 
         str += f'<td class="pts">{points[team]}</td></tr>\n'
 
@@ -238,16 +230,18 @@ def lck_events_json_to_html():
                 continue
 
             text = ''
-            style = ''
+            diff = 0
             for point in h2h[team].get(vs) or []:
                 if point == 1:
                     text = text + '-' + 'W' if text else 'W'
-                    style += 'w'
                 else:
                     text = text + '-' + 'L' if text else 'L'
-                    style += 'l'
+                diff += point
 
-            str += f'<td class="{style}">{text}</td>'
+            if text:
+                str += f'<td style={team_style(None, diff)}>{text}</td>'
+            else:
+                str += f'<td></td>'
 
         str += f'<td class="pts">{points[team]}</td></tr>\n'
 
