@@ -37,7 +37,7 @@ table.playoffs col.team {width: 62px;}
 td.na {background-color: #eee;}
 td.pts, th.pts {font-weight: bold; padding: 0 4px;}
 
-table.schedule td.pts, td.roundfirst {border-left: 1px solid #aaa;}
+table.schedule td.pts, td.roundfirst {border-left: 1px solid black;}
 
 table.upcomings {border-top: 2px solid black;}
 td.date {text-align: left; vertical-align: top;}
@@ -49,7 +49,7 @@ table.upcomings td.vs {padding: 0 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
 
-tr.datetime {border-bottom: 1px solid #aaa;}
+tr.datetime {border-bottom: 1px solid #ccc;}
 </style>
 </head>
 <body>
