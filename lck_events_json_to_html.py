@@ -18,9 +18,9 @@ HTML_HEAD = '''<!DOCTYPE html>
 <style>
 body {font-family: "Short Stack"; font-size: 16px;}
 a {color: black; text-decoration: none;}
-table {margin: 1em 0.5em;}
 caption {font-weight: bold;}
 
+table {margin: 1em 0.5em;}
 div.flex-container {display: flex; flex-flow: row wrap;}\
 div table {margin: 0 0.5em;}
 
@@ -28,22 +28,19 @@ table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
 thead tr, tr:last-of-type {border-bottom: 2px solid black;}
 
-th {text-align: center;}
+th {text-align: center; padding: 0 4px;}
 td {text-align: center;}
 
-col.th {width: 42px;}
 col.team {width: 38px;}
-col.pts {width: 32px;}
 table.playoffs col.team {width: 62px;}
 
 td.na {background-color: #eee;}
-td.pts {font-weight: bold; padding-left: 4px; padding-right: 4px;}
-th.pts {padding-left: 2px; padding-right: 2px;}
+td.pts, th.pts {font-weight: bold; padding: 0 4px;}
 
 table.schedule td.pts, td.roundfirst {border-left: 1px solid #aaa;}
 
 table.upcomings {border-top: 2px solid black;}
-table.upcomings td.date {text-align: left; vertical-align: top; padding-right: 8px;}
+table.upcomings td.date {text-align: left; vertical-align: top; padding-right: 1em;}
 table.upcomings td.time {padding-right: 4px;}
 table.upcomings td.vs {padding: 0 4px;}
 td.sat {color: hsl(220, 100%, 40%);}

@@ -5673,7 +5673,9 @@
         },
         "match": {
             "id": "111561337007239877",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "Dplus Kia",
@@ -5719,7 +5721,9 @@
         },
         "match": {
             "id": "111561337007239829",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "Gen.G",
