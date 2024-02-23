@@ -11,7 +11,7 @@ timezone_korean = timezone(timedelta(hours=9))
 HTML_HEAD = '''<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=740">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
@@ -45,8 +45,8 @@ table.schedule td.pts, td.roundfirst {border-left: 1px solid #aaa;}
 
 table.upcomings {border-top: 2px solid black;}
 table.upcomings td.date {text-align: left; vertical-align: top; padding-right: 8px;}
-table.upcomings td.time {text-align: center; padding-right: 4px;}
-table.upcomings td.vs {text-align: center; padding-left: 4px; padding-right: 4px;}
+table.upcomings td.time {padding-right: 4px;}
+table.upcomings td.vs {padding: 0 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
 
