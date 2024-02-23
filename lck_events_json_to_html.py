@@ -40,7 +40,10 @@ td.pts, th.pts {font-weight: bold; padding: 0 4px;}
 table.schedule td.pts, td.roundfirst {border-left: 1px solid #aaa;}
 
 table.upcomings {border-top: 2px solid black;}
-table.upcomings td.date {text-align: left; vertical-align: top; padding-right: 1em;}
+td.date {text-align: left; vertical-align: top;}
+td.weekday {padding-right: 2px;}
+td.day {padding-right: 4px;}
+td.month {padding-right: 1em;}
 table.upcomings td.time {padding-right: 4px;}
 table.upcomings td.vs {padding: 0 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
@@ -142,15 +145,14 @@ def lck_events_json_to_html():
     for date in upcomings.keys():
         for i in range(len(upcomings[date])):
             if i == 0:
-                str += '<tr class="date"><td class="date'
                 match date.weekday():
                     case 5:
-                        str += ' sat"'
+                        weekday = ' sat'
                     case 6:
-                        str += ' sun"'
+                        weekday = ' sun'
                     case _:
-                        str += '"'
-                str += f' rowspan="{len(upcomings[date])}">{date.strftime("%a, %d %b")}</td>'
+                        weekday = ''
+                str += f'<tr><td class="date weekday{weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%a,")}</td><td class="date day{weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%d")}</td><td class="date month{weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%b")}</td>'
             else:
                 str += '<tr>'
 
