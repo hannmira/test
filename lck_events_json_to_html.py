@@ -11,18 +11,18 @@ timezone_korean = timezone(timedelta(hours=9))
 HTML_HEAD = '''<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=760" />
+<meta name="viewport" content="width=780" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
 <style>
 body {font-family: "Short Stack"; font-size: 16px;}
 a {color: black; text-decoration: none;}
-table {margin: 1em 0;}
+table {margin: 1em 0.5em;}
 caption {font-weight: bold;}
 
 div.flex-container {display: flex; flex-flow: row wrap;}\
-div table {margin: 0 1em 0 0;}
+div table {margin: 0 0.5em;}
 
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
