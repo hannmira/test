@@ -231,9 +231,9 @@ def lck_events_json_to_html():
             diff = 0
             for point in h2h[team].get(vs) or []:
                 if point == 1:
-                    text = text + '-' + 'W' if text else 'W'
+                    text += 'W'
                 else:
-                    text = text + '-' + 'L' if text else 'L'
+                    text += 'L'
                 diff += point
 
             if text:
