@@ -40,10 +40,7 @@ td.pts, th.pts {font-weight: bold; padding: 0 4px;}
 table.schedule td.pts, td.roundfirst {border-left: 1px solid black;}
 
 table.upcomings {border-top: 2px solid black;}
-td.date {text-align: left; vertical-align: top;}
-td.weekday {padding-right: 2px;}
-td.day {padding-right: 4px;}
-td.month {padding-right: 1em;}
+td.date {text-align: left; vertical-align: top; padding-right: 1em;}
 table.upcomings td.time {padding-right: 4px;}
 table.upcomings td.vs {padding: 0 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
@@ -152,7 +149,7 @@ def lck_events_json_to_html():
                         weekday = ' sun'
                     case _:
                         weekday = ''
-                str += f'<tr><td class="date weekday{weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%a,")}</td><td class="date day{weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%d")}</td><td class="date month{weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%b")}</td>'
+                str += f'<tr><td class="date {weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%a")[0]}, {date.strftime("%d %b")}</td>'
             else:
                 str += '<tr>'
 
