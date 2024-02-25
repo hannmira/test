@@ -21,7 +21,7 @@ a {color: black; text-decoration: none;}
 caption {font-weight: bold;}
 
 table {margin: 1em 0.5em;}
-div.flex-container {display: flex; flex-flow: row wrap;}\
+div.flex-container {display: flex; flex-flow: row wrap;}
 div table {margin: 0 0.5em;}
 
 table, th, td {border-collapse: collapse;}

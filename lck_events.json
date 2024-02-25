@@ -5673,7 +5673,9 @@
         },
         "match": {
             "id": "111561337007305689",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "T1",
@@ -5710,7 +5712,7 @@
     },
     {
         "startTime": "2024-02-24T08:30:00Z",
-        "state": "inProgress",
+        "state": "completed",
         "type": "match",
         "blockName": "Week 5",
         "league": {
@@ -5719,7 +5721,9 @@
         },
         "match": {
             "id": "111561337007305645",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "Gen.G",
