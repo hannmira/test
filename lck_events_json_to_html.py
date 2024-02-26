@@ -11,7 +11,7 @@ timezone_korean = timezone(timedelta(hours=9))
 HTML_HEAD = '''<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=784" />
+<meta name="viewport" content="width=800" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
