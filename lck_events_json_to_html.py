@@ -11,14 +11,13 @@ timezone_korean = timezone(timedelta(hours=9))
 HTML_HEAD = '''<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=800" />
+<meta name="viewport" content="width=874" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
 <style>
 body {font-family: "Short Stack"; font-size: 16px;}
 a {color: black; text-decoration: none;}
-caption {font-weight: bold;}
 
 table {margin: 1em 0.5em;}
 div.flex-container {display: flex; flex-flow: row wrap;}
@@ -29,13 +28,12 @@ tr {border-bottom: 1px solid black;}
 thead tr, tr:last-of-type {border-bottom: 2px solid black;}
 
 th {text-align: center; padding: 0 4px; white-space: nowrap;}
-td {text-align: center;}
-
-col.team {width: 38px;}
-table.playoffs col.team {width: 62px;}
-
+td {text-align: center; padding: 0 2px;}
 td.na {background-color: #eee;}
-td.w_l, th.w_l {font-weight: bold; padding: 0 4px;}
+td.w_l, td.pts {font-weight: bold;}
+
+col.team {width: 40px;}
+table.playoffs col.team {width: 62px;}
 
 table.schedule td.w_l, td.roundfirst {border-left: 1px solid black;}
 
@@ -190,7 +188,7 @@ def lck_events_json_to_html():
         if i % (len(teams)-1) == 0:
             str += f'<th colspan="{len(teams)-1}">Round {int(i/(len(teams)-1)+1)}</th>'
             i += 1
-    str += '<th class="w_l">W-L</th></tr></thead>\n'
+    str += '<th class="w_l">W-L</th><th>Pts</th></tr></thead>\n'
 
     for team in teams:
         str += f'<tr><th scope="row">{team}</th>'
@@ -203,7 +201,7 @@ def lck_events_json_to_html():
 
             str += f' style={team_style(match["vs"], match["set"])}>{match["alink"]}{match["vs"]}</a></td>'
 
-        str += f'<td class="w_l">{w_l[team]}</td></tr>\n'
+        str += f'<td class="w_l">{w_l[team]}</td><td class="pts">{pts[team]}</td></tr>\n'
 
     str += "</table>\n\n"
 
@@ -215,7 +213,7 @@ def lck_events_json_to_html():
     for team in teams:
         str += f'<td>{team}</td>'
 
-    str += '<th class="w_l">W-L</th></tr></thead>\n'
+    str += '<th class="w_l">W-L</th><th>Pts</th></tr></thead>\n'
 
     for team in teams:
         str += f'<tr><th>{team}</th>'
@@ -238,7 +236,7 @@ def lck_events_json_to_html():
             else:
                 str += f'<td></td>'
 
-        str += f'<td class="w_l">{w_l[team]}</td></tr>\n'
+        str += f'<td class="w_l">{w_l[team]}</td><td class="pts">{pts[team]}</td></tr>\n'
 
     str += '</table>\n\n'
 
