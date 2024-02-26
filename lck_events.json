@@ -1,5 +1,53 @@
 [
     {
+        "startTime": "2023-06-28T08:00:00Z",
+        "state": "completed",
+        "type": "match",
+        "blockName": "Week 4",
+        "league": {
+            "name": "LCK",
+            "slug": "lck"
+        },
+        "match": {
+            "id": "110371551279016164",
+            "flags": [
+                "hasVod"
+            ],
+            "teams": [
+                {
+                    "name": "Hanwha Life Esports",
+                    "code": "HLE",
+                    "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 0
+                    },
+                    "record": {
+                        "wins": 12,
+                        "losses": 6
+                    }
+                },
+                {
+                    "name": "Dplus Kia",
+                    "code": "DK",
+                    "image": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 11,
+                        "losses": 7
+                    }
+                }
+            ],
+            "strategy": {
+                "type": "bestOf",
+                "count": 3
+            }
+        }
+    },
+    {
         "startTime": "2023-06-28T10:30:00Z",
         "state": "completed",
         "type": "match",
@@ -5666,7 +5714,7 @@
     },
     {
         "startTime": "2024-02-25T06:00:00Z",
-        "state": "inProgress",
+        "state": "unstarted",
         "type": "match",
         "blockName": "Week 5",
         "league": {
@@ -5675,7 +5723,9 @@
         },
         "match": {
             "id": "111561337007305537",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "DRX",
@@ -5701,52 +5751,6 @@
                     "record": {
                         "wins": 5,
                         "losses": 5
-                    }
-                }
-            ],
-            "strategy": {
-                "type": "bestOf",
-                "count": 3
-            }
-        }
-    },
-    {
-        "startTime": "2024-02-25T08:30:00Z",
-        "state": "unstarted",
-        "type": "match",
-        "blockName": "Week 5",
-        "league": {
-            "name": "LCK",
-            "slug": "lck"
-        },
-        "match": {
-            "id": "111561337007305617",
-            "flags": [],
-            "teams": [
-                {
-                    "name": "Kwangdong Freecs",
-                    "code": "KDF",
-                    "image": "http://static.lolesports.com/teams/1641186009897_KDF_KR_logo.png",
-                    "result": {
-                        "outcome": null,
-                        "gameWins": 0
-                    },
-                    "record": {
-                        "wins": 5,
-                        "losses": 4
-                    }
-                },
-                {
-                    "name": "OKSavingsBank BRION",
-                    "code": "BRO",
-                    "image": "http://static.lolesports.com/teams/1684916981638_OKSavingsBankBRION_fullcolor_darkbg_vertical.png",
-                    "result": {
-                        "outcome": null,
-                        "gameWins": 0
-                    },
-                    "record": {
-                        "wins": 1,
-                        "losses": 8
                     }
                 }
             ],
