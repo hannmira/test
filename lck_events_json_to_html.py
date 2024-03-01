@@ -147,7 +147,7 @@ def lck_events_json_to_html():
                         weekday = ' sun'
                     case _:
                         weekday = ''
-                str += f'<tr><td class="date {weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%a")[0]}, {date.strftime("%d %b")}</td>'
+                str += f'<tr><td class="date {weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%a")}, {date.strftime("%d %b")}</td>'
             else:
                 str += '<tr>'
 
