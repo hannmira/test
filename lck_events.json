@@ -5755,7 +5755,7 @@
         }
     },
     {
-        "startTime": "2024-03-01T08:00:00Z",
+        "startTime": "2024-03-01T12:00:00Z",
         "state": "unstarted",
         "type": "match",
         "blockName": "Week 6",
@@ -5801,7 +5801,7 @@
         }
     },
     {
-        "startTime": "2024-03-01T10:30:00Z",
+        "startTime": "2024-03-01T14:30:00Z",
         "state": "unstarted",
         "type": "match",
         "blockName": "Week 6",
@@ -5847,7 +5847,7 @@
         }
     },
     {
-        "startTime": "2024-03-02T06:00:00Z",
+        "startTime": "2024-03-02T10:00:00Z",
         "state": "unstarted",
         "type": "match",
         "blockName": "Week 6",
@@ -5893,7 +5893,7 @@
         }
     },
     {
-        "startTime": "2024-03-02T08:30:00Z",
+        "startTime": "2024-03-02T12:30:00Z",
         "state": "unstarted",
         "type": "match",
         "blockName": "Week 6",
@@ -5939,7 +5939,7 @@
         }
     },
     {
-        "startTime": "2024-03-03T06:00:00Z",
+        "startTime": "2024-03-03T10:00:00Z",
         "state": "unstarted",
         "type": "match",
         "blockName": "Week 6",
@@ -5985,7 +5985,7 @@
         }
     },
     {
-        "startTime": "2024-03-03T08:30:00Z",
+        "startTime": "2024-03-03T12:30:00Z",
         "state": "unstarted",
         "type": "match",
         "blockName": "Week 6",
