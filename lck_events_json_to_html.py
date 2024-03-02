@@ -18,10 +18,14 @@ HTML_HEAD = '''<!DOCTYPE html>
 <style>
 body {font-family: "Short Stack"; font-size: 16px;}
 a {color: black; text-decoration: none;}
-caption {font-weight: bold; text-align: left; margin-bottom: 2px;}
+
+caption {font-weight: bold; margin-bottom: 2px; white-space: nowrap;}
+table.week caption {text-align: left;}
+table.playoffs caption {text-align: center;}
 
 table {margin: 1em 0.5em;}
 div {margin: 1em 0;}
+div:first-of-type {margin-top: 0;}
 div.flex-container {display: flex; flex-flow: row wrap; align-items: flex-start;}
 div table {margin: 0 0.5em;}
 div table+table.week {margin: 0 1.5em;}
@@ -40,7 +44,7 @@ table.playoffs col.team {width: 62px;}
 
 table.schedule td.w_l, td.roundfirst {border-left: 1px solid black;}
 
-table.week {border-top: 2px solid black;}
+table.week, table.playoffs {border-top: 2px solid black;}
 td.date {text-align: left; vertical-align: top; padding-right: 1em;}
 table.week td.time {padding-right: 4px;}
 table.week td.vs {padding: 0 4px;}
@@ -188,7 +192,7 @@ def lck_events_json_to_html():
     # playoffs
     str += '<div style="display:flex">\n'
     for round in playoffs.keys():
-        str += f'<table class="playoffs">\n<colgroup><col class="team"><col><col class="team"></colgroup>\n<thead><tr><th colspan="3">{round}</th></tr></thead>\n'
+        str += f'<table class="playoffs">\n<caption>{round}</caption>\n<colgroup><col class="team"><col><col class="team"></colgroup>\n'
         for round_data in playoffs[round]:
             str += '<tr class="datetime"><td colspan="3"'
             match round_data["datetime"].weekday():
