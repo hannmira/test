@@ -26,6 +26,7 @@ table.playoffs caption {text-align: center;}
 table {margin: 1em 0.5em;}
 div {margin: 1em 0;}
 div:first-of-type {margin-top: 0;}
+table:last-of-type {margin-bottom: 0;}
 div.flex-container {display: flex; flex-flow: row wrap; align-items: flex-start;}
 div table {margin: 0 0.5em;}
 div table+table.week {margin: 0 1.5em;}
