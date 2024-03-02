@@ -3864,7 +3864,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 },
@@ -4105,7 +4105,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 },
                 {
@@ -4261,7 +4261,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 }
@@ -4358,7 +4358,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 }
             ],
@@ -4501,7 +4501,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 }
@@ -4537,7 +4537,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 },
                 {
@@ -4549,7 +4549,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 }
@@ -4742,7 +4742,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 }
             ],
@@ -4824,7 +4824,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 },
@@ -5078,7 +5078,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 }
             ],
@@ -5160,7 +5160,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 },
@@ -5318,7 +5318,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 }
             ],
@@ -5352,7 +5352,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 },
@@ -5509,7 +5509,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 }
@@ -5672,19 +5672,6 @@
             "flags": [],
             "teams": [
                 {
-                    "name": "FearX",
-                    "code": "FOX",
-                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
-                    "result": {
-                        "outcome": "loss",
-                        "gameWins": 1
-                    },
-                    "record": {
-                        "wins": 3,
-                        "losses": 9
-                    }
-                },
-                {
                     "name": "Hanwha Life Esports",
                     "code": "HLE",
                     "image": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
@@ -5696,6 +5683,19 @@
                         "wins": 9,
                         "losses": 2
                     }
+                },
+                {
+                    "name": "FearX",
+                    "code": "FOX",
+                    "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
+                    "result": {
+                        "outcome": "loss",
+                        "gameWins": 1
+                    },
+                    "record": {
+                        "wins": 3,
+                        "losses": 9
+                    }
                 }
             ],
             "strategy": {
@@ -5706,7 +5706,7 @@
     },
     {
         "startTime": "2024-03-01T14:30:00Z",
-        "state": "inProgress",
+        "state": "completed",
         "type": "match",
         "blockName": "Week 6",
         "league": {
@@ -5718,6 +5718,19 @@
             "flags": [],
             "teams": [
                 {
+                    "name": "Gen.G",
+                    "code": "GEN",
+                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
+                    "result": {
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 11,
+                        "losses": 1
+                    }
+                },
+                {
                     "name": "kt Rolster",
                     "code": "KT",
                     "image": "http://static.lolesports.com/teams/kt_darkbackground.png",
@@ -5727,20 +5740,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
-                    }
-                },
-                {
-                    "name": "Gen.G",
-                    "code": "GEN",
-                    "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
-                    "result": {
-                        "outcome": "win",
-                        "gameWins": 2
-                    },
-                    "record": {
-                        "wins": 10,
-                        "losses": 1
+                        "losses": 5
                     }
                 }
             ],
@@ -5865,7 +5865,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 },
                 {
@@ -6015,7 +6015,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 }
@@ -6108,7 +6108,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 }
             ],
@@ -6245,7 +6245,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 }
@@ -6338,7 +6338,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 }
             ],
@@ -6555,7 +6555,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 },
                 {
@@ -6613,7 +6613,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 }
@@ -6739,7 +6739,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 },
                 {
@@ -6830,7 +6830,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 },
@@ -6876,7 +6876,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 },
@@ -6969,7 +6969,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 },
                 {
@@ -7060,7 +7060,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 10,
+                        "wins": 11,
                         "losses": 1
                     }
                 },
@@ -7304,7 +7304,7 @@
                     },
                     "record": {
                         "wins": 6,
-                        "losses": 4
+                        "losses": 5
                     }
                 }
             ],
