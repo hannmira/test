@@ -20,7 +20,8 @@ body {font-family: "Short Stack"; font-size: 16px;}
 a {color: black; text-decoration: none;}
 
 table {margin: 1em 0.5em;}
-div.flex-container {display: flex; flex-flow: row wrap;}
+div {margin: 1em 0;}
+div.flex-container {display: flex; flex-flow: row wrap; align-items: flex-start;}
 div table {margin: 0 0.5em;}
 
 table, th, td {border-collapse: collapse;}
@@ -37,10 +38,10 @@ table.playoffs col.team {width: 62px;}
 
 table.schedule td.w_l, td.roundfirst {border-left: 1px solid black;}
 
-table.upcomings {border-top: 2px solid black;}
+table.week {border-top: 2px solid black;}
 td.date {text-align: left; vertical-align: top; padding-right: 1em;}
-table.upcomings td.time {padding-right: 4px;}
-table.upcomings td.vs {padding: 0 4px;}
+table.week td.time {padding-right: 4px;}
+table.week td.vs {padding: 0 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
 
@@ -83,7 +84,8 @@ def lck_events_json_to_html():
 
     h2h = {}
     schedule = {}
-    upcomings = {}
+    thisweek = {}
+    nextweek = {}
     playoffs = {}
 
     for event in events:
@@ -110,8 +112,11 @@ def lck_events_json_to_html():
             set = event['match']['teams'][0]['result']['gameWins'] - event['match']['teams'][1]['result']['gameWins']
 
         today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone_korean)
-        if datetime_korean >= today_midnight and datetime_korean < today_midnight + timedelta(days=7):
-            upcomings.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "set":set, "alink":alink})
+        today_weekday = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone_korean).weekday()
+        if datetime_korean >= today_midnight - timedelta(days=today_weekday) and datetime_korean < today_midnight + timedelta(days=(7-today_weekday)):
+            thisweek.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "set":set, "alink":alink})
+        elif datetime_korean >= today_midnight + timedelta(days=(7-today_weekday)) and datetime_korean < today_midnight + timedelta(days=(14-today_weekday)):
+            nextweek.setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "set":set, "alink":alink})
 
         if event['blockName'].startswith('Playoffs'):
             playoffs.setdefault(event['blockName'], []).append({'datetime': datetime_korean, "home":home, "away":away, 'set':set, "alink":alink})
@@ -134,11 +139,12 @@ def lck_events_json_to_html():
 
     str = HTML_HEAD
 
-    # upcoming events
-    str += '<table class="upcomings">\n'
+    str += '<div style="display:flex">\n'
+    # events in this week
+    str += '<table class="week">\n'
     str += '<colgroup><col class="date"><col class="time"><col class="th"><col class="vs"><col class="th"></colgroup>\n'
-    for date in upcomings.keys():
-        for i in range(len(upcomings[date])):
+    for date in thisweek.keys():
+        for i in range(len(thisweek[date])):
             if i == 0:
                 match date.weekday():
                     case 5:
@@ -147,21 +153,51 @@ def lck_events_json_to_html():
                         weekday = ' sun'
                     case _:
                         weekday = ''
-                str += f'<tr><td class="date {weekday}" rowspan="{len(upcomings[date])}">{date.strftime("%a")}, {date.strftime("%d %b")}</td>'
+                str += f'<tr><td class="date {weekday}" rowspan="{len(thisweek[date])}">{date.strftime("%a")}, {date.strftime("%d %b")}</td>'
             else:
                 str += '<tr>'
 
-            alink = upcomings[date][i]["alink"]
+            alink = thisweek[date][i]["alink"]
 
-            home = upcomings[date][i]["home"]
-            hometd= f'<th class="team" style={team_style(home, upcomings[date][i]["set"])}>{alink}{home}</a></td>'
+            home = thisweek[date][i]["home"]
+            hometd= f'<th class="team" style={team_style(home, thisweek[date][i]["set"])}>{alink}{home}</a></td>'
 
-            away = upcomings[date][i]["away"]
-            awaytd= f'<th class="team" style={team_style(away, -upcomings[date][i]["set"])}>{alink}{away}</a></td>'
+            away = thisweek[date][i]["away"]
+            awaytd= f'<th class="team" style={team_style(away, -thisweek[date][i]["set"])}>{alink}{away}</a></td>'
 
-            str += f'<td class="time">{alink}{upcomings[date][i]["time"]}</a></td>{hometd}<td class="vs">{alink}vs</a></td>{awaytd}</tr>\n'
+            str += f'<td class="time">{alink}{thisweek[date][i]["time"]}</a></td>{hometd}<td class="vs">{alink}vs</a></td>{awaytd}</tr>\n'
 
     str += "</table>\n\n"
+
+    # events in next week
+    str += '<table class="week">\n'
+    str += '<colgroup><col class="date"><col class="time"><col class="th"><col class="vs"><col class="th"></colgroup>\n'
+    for date in nextweek.keys():
+        for i in range(len(nextweek[date])):
+            if i == 0:
+                match date.weekday():
+                    case 5:
+                        weekday = ' sat'
+                    case 6:
+                        weekday = ' sun'
+                    case _:
+                        weekday = ''
+                str += f'<tr><td class="date {weekday}" rowspan="{len(nextweek[date])}">{date.strftime("%a")}, {date.strftime("%d %b")}</td>'
+            else:
+                str += '<tr>'
+
+            alink = nextweek[date][i]["alink"]
+
+            home = nextweek[date][i]["home"]
+            hometd= f'<th class="team" style={team_style(home, nextweek[date][i]["set"])}>{alink}{home}</a></td>'
+
+            away = nextweek[date][i]["away"]
+            awaytd= f'<th class="team" style={team_style(away, -nextweek[date][i]["set"])}>{alink}{away}</a></td>'
+
+            str += f'<td class="time">{alink}{nextweek[date][i]["time"]}</a></td>{hometd}<td class="vs">{alink}vs</a></td>{awaytd}</tr>\n'
+
+    str += "</table>\n\n"
+    str += '</div>\n\n'
 
     # playoffs
     str += '<div style="display:flex">\n'
