@@ -16,20 +16,18 @@ HTML_HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
 <style>
-body {font-family: "Short Stack"; font-size: 16px;}
+body {font-family: "Short Stack"; font-size: 16px; margin: 0.5em 1em;}
 a {color: black; text-decoration: none;}
 
 caption {font-weight: bold; margin-bottom: 2px; white-space: nowrap;}
 table.week caption {text-align: left;}
 table.playoffs caption {text-align: center;}
 
-table {margin: 1em 0.5em;}
-div {margin: 1em 0;}
-div:first-of-type {margin-top: 0;}
-table:last-of-type {margin-bottom: 0;}
-div.flex-container {display: flex; flex-flow: row wrap; align-items: flex-start;}
-div table {margin: 0 0.5em;}
-div table+table.week {margin: 0 1.5em;}
+table {margin: 1em 0 0 0;}
+div {margin: 0 0 1em 0; padding: 0; display: flex; flex-flow: row wrap; align-items: flex-start;}
+div table {margin: 0;}
+div table+table {margin-left: 1em;}
+div table+table.week {margin-left: 1.5em;}
 
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
@@ -157,7 +155,7 @@ def lck_events_json_to_html():
 
     str = HTML_HEAD
 
-    str += '<div style="display:flex">\n'
+    str += '<div>\n'
 
     for week_index in range(len(week)):
         str += '<table class="week">\n'
@@ -191,7 +189,7 @@ def lck_events_json_to_html():
     str += '</div>\n\n'
 
     # playoffs
-    str += '<div style="display:flex">\n'
+    str += '<div>\n'
     for round in playoffs.keys():
         str += f'<table class="playoffs">\n<caption>{round}</caption>\n<colgroup><col class="team"><col><col class="team"></colgroup>\n'
         for round_data in playoffs[round]:
