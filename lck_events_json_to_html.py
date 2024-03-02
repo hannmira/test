@@ -23,6 +23,7 @@ table {margin: 1em 0.5em;}
 div {margin: 1em 0;}
 div.flex-container {display: flex; flex-flow: row wrap; align-items: flex-start;}
 div table {margin: 0 0.5em;}
+div table+table.week {margin: 0 1.5em;}
 
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
