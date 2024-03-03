@@ -48,8 +48,9 @@ table.week td.time {padding-right: 4px;}
 table.week td.vs {padding: 0 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
-
 tr.datetime {border-bottom: 1px solid #ccc;}
+
+table.week td.time, table.week td.vs, table.week th.team, table.playoffs tr, table.schedule td.match {cursor: pointer;}
 </style>
 </head>
 <body>
@@ -111,7 +112,8 @@ def lck_events_json_to_html():
         win = 0
         home = event['match']['teams'][0]['code']
         away = event['match']['teams'][1]['code']
-        alink = f'<a href="https://oracleselixir.com/matches/{event["match"]["id"]}" target="_blank">'
+        match_id = event["match"]["id"]
+        onclick = f'onClick="window.open(\'https://oracleselixir.com/matches/{match_id}\', \'\', \'\')"'
 
         if event['match']['teams'][0]['result'] and event['match']['teams'][0]['result']['outcome']:
             win = 1 if event['match']['teams'][0]['result']['outcome'] == 'win' else -1
@@ -129,16 +131,16 @@ def lck_events_json_to_html():
             week_title[1] = "Next Week"
 
         if datetime_korean >= start_date and datetime_korean < start_date + timedelta(days=7):
-            week[0].setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "set":set, "alink":alink})
+            week[0].setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "set":set, "onclick":onclick})
         elif datetime_korean >= start_date + timedelta(days=7) and datetime_korean < start_date + timedelta(days=14):
-            week[1].setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "set":set, "alink":alink})
+            week[1].setdefault(datetime_korean.date(),[]).append({"time":datetime_korean.strftime("%H:%M"), "home":home, "away":away, "set":set, "onclick":onclick})
 
         if event['blockName'].startswith('Playoffs'):
-            playoffs.setdefault(event['blockName'], []).append({'datetime': datetime_korean, "home":home, "away":away, 'set':set, "alink":alink})
+            playoffs.setdefault(event['blockName'], []).append({'datetime': datetime_korean, "home":home, "away":away, 'set':set, "onclick":onclick})
             continue
 
-        schedule.setdefault(home, []).append({'vs':away, 'set':set, 'alink':alink})
-        schedule.setdefault(away, []).append({'vs':home, 'set':-set, 'alink':alink})
+        schedule.setdefault(home, []).append({'vs':away, 'set':set, 'onclick':onclick})
+        schedule.setdefault(away, []).append({'vs':home, 'set':-set, 'onclick':onclick})
 
         if win and set:
             w_l[home] = w_l.setdefault(home, 0) + win
@@ -162,6 +164,8 @@ def lck_events_json_to_html():
         str += '<colgroup><col class="date"><col class="time"><col class="th"><col class="vs"><col class="th"></colgroup>\n'
         for date in week[week_index].keys():
             for i in range(len(week[week_index][date])):
+                onclick = week[week_index][date][i]["onclick"]
+                str += f'<tr {onclick}>'
                 if i == 0:
                     match date.weekday():
                         case 5:
@@ -170,19 +174,15 @@ def lck_events_json_to_html():
                             weekday = ' sun'
                         case _:
                             weekday = ''
-                    str += f'<tr><td class="date {weekday}" rowspan="{len(week[week_index][date])}">{date.strftime("%a")}, {date.strftime("%d %b")}</td>'
-                else:
-                    str += '<tr>'
-
-                alink = week[week_index][date][i]["alink"]
+                    str += f'<td class="date {weekday}" rowspan="{len(week[week_index][date])}" onclick="event.stopPropagation()">{date.strftime("%a")}, {date.strftime("%d %b")}</td>'
 
                 home = week[week_index][date][i]["home"]
-                hometd= f'<th class="team" style={team_style(home, week[week_index][date][i]["set"])}>{alink}{home}</a></td>'
+                hometd= f'<th class="team" style={team_style(home, week[week_index][date][i]["set"])}>{home}</td>'
 
                 away = week[week_index][date][i]["away"]
-                awaytd= f'<th class="team" style={team_style(away, -week[week_index][date][i]["set"])}>{alink}{away}</a></td>'
+                awaytd= f'<th class="team" style={team_style(away, -week[week_index][date][i]["set"])}>{away}</td>'
 
-                str += f'<td class="time">{alink}{week[week_index][date][i]["time"]}</a></td>{hometd}<td class="vs">{alink}vs</a></td>{awaytd}</tr>\n'
+                str += f'<td class="time">{week[week_index][date][i]["time"]}</td>{hometd}<td class="vs">vs</td>{awaytd}</tr>\n'
 
         str += "</table>\n"
     str += '</div>\n\n'
@@ -192,14 +192,14 @@ def lck_events_json_to_html():
     for round in playoffs.keys():
         str += f'<table class="playoffs">\n<caption>{round}</caption>\n<colgroup><col class="team"><col><col class="team"></colgroup>\n'
         for round_data in playoffs[round]:
-            str += '<tr class="datetime"><td colspan="3"'
+            str += f'<tr class="datetime" {round_data["onclick"]}><td colspan="3"'
             match round_data["datetime"].weekday():
                 case 5:
                     str += ' class="sat"'
                 case 6:
                     str += ' class="sun"'
             str += f'>{round_data["datetime"].strftime("%a, %d %b %H:%M")}</td></tr>\n'
-            str += f'<tr class="match"><th style={team_style(round_data["home"], round_data["set"])}>{round_data["home"]}</th><td>vs</td><th style={team_style(round_data["away"], -round_data["set"])}>{round_data["away"]}</th></tr>'
+            str += f'<tr class="match" {round_data["onclick"]}><th style={team_style(round_data["home"], round_data["set"])}>{round_data["home"]}</th><td>vs</td><th style={team_style(round_data["away"], -round_data["set"])}>{round_data["away"]}</th></tr>'
         str += "</table>\n"
 
     str += '</div>\n\n'
@@ -219,11 +219,11 @@ def lck_events_json_to_html():
         for i in range(len(schedule[team])):
             match = schedule[team][i]
             if i % (len(teams)-1) == 0:
-                str += '<td class="roundfirst"'
+                str += '<td class="roundfirst match"'
             else:
-                str += '<td'
+                str += '<td class="match"'
 
-            str += f' style={team_style(match["vs"], match["set"])}>{match["alink"]}{match["vs"]}</a></td>'
+            str += f' style={team_style(match["vs"], match["set"])} {match["onclick"]}>{match["vs"]}</td>'
 
         str += f'<td class="w_l">{w_l[team]}</td><td class="pts">{pts[team]}</td></tr>\n'
 
