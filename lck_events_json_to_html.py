@@ -24,10 +24,9 @@ table.week caption {text-align: left;}
 table.playoffs caption {text-align: center;}
 
 table {margin: 1em 0 0 0;}
-div {margin: 0 0 1em 0; padding: 0; display: flex; flex-flow: row wrap; align-items: flex-start;}
 div table {margin: 0;}
-div table+table {margin-left: 1em;}
-div table+table.week {margin-left: 1.5em;}
+div {margin: 0 0 1em 0; padding: 0; display: flex; flex-flow: row wrap; align-items: flex-start; gap: 1em;}
+div.weeks {gap: 2em;}
 
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
@@ -155,7 +154,7 @@ def lck_events_json_to_html():
 
     str = HTML_HEAD
 
-    str += '<div>\n'
+    str += '<div class="weeks">\n'
 
     for week_index in range(len(week)):
         str += '<table class="week">\n'
