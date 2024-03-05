@@ -19,7 +19,7 @@ HTML_HEAD = '''<!DOCTYPE html>
 body {font-family: "Short Stack"; font-size: 16px; margin: 0.5em 1em;}
 a {color: black; text-decoration: none;}
 
-caption {font-weight: bold; margin-bottom: 2px; white-space: nowrap;}
+caption {font-weight: bold; margin-bottom: 2px; white-space: nowrap; padding: 0 2px;}
 table.week caption {text-align: left;}
 table.playoffs caption {text-align: center;}
 
