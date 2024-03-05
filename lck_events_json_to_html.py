@@ -50,7 +50,8 @@ td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
 tr.datetime {border-bottom: 1px solid #ccc;}
 
-table.week td.time, table.week td.vs, table.week th.team, table.playoffs tr, table.schedule td.match {cursor: pointer;}
+.match {cursor: pointer;}
+.notmatch {cursor: auto;}
 </style>
 </head>
 <body>
@@ -165,7 +166,7 @@ def lck_events_json_to_html():
         for date in week[week_index].keys():
             for i in range(len(week[week_index][date])):
                 onclick = week[week_index][date][i]["onclick"]
-                str += f'<tr {onclick}>'
+                str += f'<tr class="match" {onclick}>'
                 if i == 0:
                     match date.weekday():
                         case 5:
@@ -174,7 +175,7 @@ def lck_events_json_to_html():
                             weekday = ' sun'
                         case _:
                             weekday = ''
-                    str += f'<td class="date {weekday}" rowspan="{len(week[week_index][date])}" onclick="event.stopPropagation()">{date.strftime("%a")}, {date.strftime("%d %b")}</td>'
+                    str += f'<td class="date notmatch{weekday}" rowspan="{len(week[week_index][date])}" onclick="event.stopPropagation()">{date.strftime("%a")}, {date.strftime("%d %b")}</td>'
 
                 home = week[week_index][date][i]["home"]
                 hometd= f'<th class="team" style={team_style(home, week[week_index][date][i]["set"])}>{home}</td>'
@@ -192,7 +193,7 @@ def lck_events_json_to_html():
     for round in playoffs.keys():
         str += f'<table class="playoffs">\n<caption>{round}</caption>\n<colgroup><col class="team"><col><col class="team"></colgroup>\n'
         for round_data in playoffs[round]:
-            str += f'<tr class="datetime" {round_data["onclick"]}><td colspan="3"'
+            str += f'<tr class="datetime match" {round_data["onclick"]}><td colspan="3"'
             match round_data["datetime"].weekday():
                 case 5:
                     str += ' class="sat"'
