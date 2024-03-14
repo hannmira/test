@@ -6443,7 +6443,9 @@
         },
         "match": {
             "id": "111561337007305661",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "Hanwha Life Esports",
@@ -6489,7 +6491,9 @@
         },
         "match": {
             "id": "111561337007305601",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "Dplus Kia",
@@ -6526,7 +6530,7 @@
     },
     {
         "startTime": "2024-03-14T08:00:00Z",
-        "state": "unstarted",
+        "state": "inProgress",
         "type": "match",
         "blockName": "Week 8",
         "league": {
@@ -6542,8 +6546,8 @@
                     "code": "FOX",
                     "image": "http://static.lolesports.com/teams/1704371545847_teamlogo_Fullcolorfordark.png",
                     "result": {
-                        "outcome": null,
-                        "gameWins": 0
+                        "outcome": "win",
+                        "gameWins": 2
                     },
                     "record": {
                         "wins": 3,
@@ -6555,7 +6559,7 @@
                     "code": "DRX",
                     "image": "http://static.lolesports.com/teams/1672910733664_01.Basic_W.png",
                     "result": {
-                        "outcome": null,
+                        "outcome": "loss",
                         "gameWins": 0
                     },
                     "record": {
