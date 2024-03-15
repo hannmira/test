@@ -43,7 +43,7 @@ def lck_events_to_json():
             print("\nNothing changed.")
         else:
             for line in unified_diff(f1_contents, f2_contents, n=0):
-                print(line)
+                print(line.rstrip())
 
 if __name__ == "__main__":
     lck_events_to_json()
