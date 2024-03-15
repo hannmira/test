@@ -3110,7 +3110,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -3144,7 +3144,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -3433,7 +3433,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 },
                 {
@@ -3445,7 +3445,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 }
@@ -3686,7 +3686,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -3733,7 +3733,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 }
@@ -3864,7 +3864,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -3926,7 +3926,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -4214,7 +4214,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -4261,7 +4261,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 }
@@ -4441,7 +4441,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 },
                 {
@@ -4501,7 +4501,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 }
@@ -4549,7 +4549,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 }
@@ -4729,7 +4729,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 },
                 {
@@ -4824,7 +4824,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -4969,7 +4969,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 },
                 {
@@ -5030,7 +5030,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -5160,7 +5160,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -5270,7 +5270,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -5352,7 +5352,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -5509,7 +5509,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 }
@@ -5641,7 +5641,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 },
                 {
@@ -5736,7 +5736,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -5798,7 +5798,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -6024,7 +6024,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -6217,7 +6217,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 },
                 {
@@ -6277,7 +6277,7 @@
                         "gameWins": 2
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 }
@@ -6374,7 +6374,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -6539,7 +6539,9 @@
         },
         "match": {
             "id": "111561337007305561",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "FearX",
@@ -6585,7 +6587,9 @@
         },
         "match": {
             "id": "111561337007305613",
-            "flags": [],
+            "flags": [
+                "hasVod"
+            ],
             "teams": [
                 {
                     "name": "OKSavingsBank BRION",
@@ -6622,7 +6626,7 @@
     },
     {
         "startTime": "2024-03-15T08:00:00Z",
-        "state": "unstarted",
+        "state": "inProgress",
         "type": "match",
         "blockName": "Week 8",
         "league": {
@@ -6634,29 +6638,29 @@
             "flags": [],
             "teams": [
                 {
-                    "name": "NongShim REDFORCE",
-                    "code": "NS",
-                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
-                    "result": {
-                        "outcome": null,
-                        "gameWins": 0
-                    },
-                    "record": {
-                        "wins": 2,
-                        "losses": 12
-                    }
-                },
-                {
                     "name": "Gen.G",
                     "code": "GEN",
                     "image": "http://static.lolesports.com/teams/1655210113163_GenG_logo_200407-05.png",
                     "result": {
-                        "outcome": null,
+                        "outcome": "win",
+                        "gameWins": 2
+                    },
+                    "record": {
+                        "wins": 14,
+                        "losses": 1
+                    }
+                },
+                {
+                    "name": "NongShim REDFORCE",
+                    "code": "NS",
+                    "image": "http://static.lolesports.com/teams/NSFullonDark.png",
+                    "result": {
+                        "outcome": "loss",
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 13,
-                        "losses": 1
+                        "wins": 2,
+                        "losses": 13
                     }
                 }
             ],
@@ -6827,7 +6831,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 },
                 {
@@ -6872,7 +6876,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -6918,7 +6922,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -6978,7 +6982,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 }
             ],
@@ -7102,7 +7106,7 @@
                         "gameWins": 0
                     },
                     "record": {
-                        "wins": 13,
+                        "wins": 14,
                         "losses": 1
                     }
                 },
@@ -7149,7 +7153,7 @@
                     },
                     "record": {
                         "wins": 2,
-                        "losses": 12
+                        "losses": 13
                     }
                 },
                 {
