@@ -30,7 +30,7 @@ div.weeks {gap: 1.5em;}
 
 table, th, td {border-collapse: collapse;}
 tr {border-bottom: 1px solid black;}
-thead tr, tr:last-of-type {border-bottom: 2px solid black;}
+thead tr, tr:last-of-type, tr.cut {border-bottom: 2px solid black;}
 
 th {text-align: center; padding: 0 4px; white-space: nowrap;}
 td {text-align: center; padding: 0 2px;}
@@ -40,7 +40,8 @@ td.w_l, td.pts {font-weight: bold;}
 col.team {width: 40px;}
 table.playoffs col.team {width: 62px;}
 
-table.schedule td.w_l, td.roundfirst {border-left: 1px solid black;}
+td.w_l, td.roundfirst {border-left: 1px solid black;}
+th[scope="row"] {border-right: 1px solid black;}
 
 table.week, table.playoffs {border-top: 2px solid black;}
 td.date {text-align: left; vertical-align: top; padding-right: 0.5em;}
@@ -215,8 +216,12 @@ def lck_events_json_to_html():
             i += 1
     str += '<th class="w_l">W-L</th><th>Pts</th></tr></thead>\n'
 
-    for team in teams:
-        str += f'<tr><th scope="row">{team}</th>'
+    for n in range(len(teams)):
+        team = teams[n]
+        if n == 1 or n == 5:
+            str += f'<tr class="cut"><th scope="row">{team}</th>'
+        else:
+            str += f'<tr><th scope="row">{team}</th>'
         for i in range(len(schedule[team])):
             match = schedule[team][i]
             if i % (len(teams)-1) == 0:
@@ -240,8 +245,12 @@ def lck_events_json_to_html():
 
     str += '<th class="w_l">W-L</th><th>Pts</th></tr></thead>\n'
 
-    for team in teams:
-        str += f'<tr><th>{team}</th>'
+    for n in range(len(teams)):
+        team = teams[n]
+        if n == 1 or n == 5:
+            str += f'<tr class="cut"><th scope="row">{team}</th>'
+        else:
+            str += f'<tr><th scope="row">{team}</th>'
         for vs in teams:
             if team == vs:
                 str += '<td class="na">-</td>'
