@@ -49,7 +49,7 @@ table.week td.time {padding-right: 4px;}
 table.week td.vs {padding: 0 4px;}
 td.sat {color: hsl(220, 100%, 40%);}
 td.sun {color: hsl(0, 100%, 40%);}
-tr.datetime {border-bottom: 1px solid #ccc;}
+tr.datetime {border-bottom: 1px solid #bbb;}
 
 .match {cursor: pointer;}
 .notmatch {cursor: auto;}
